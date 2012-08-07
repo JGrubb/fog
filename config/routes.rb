@@ -1,4 +1,6 @@
 Fog::Application.routes.draw do
+  resources :pages
+
   resources :teachers
 
   resources :announcements
