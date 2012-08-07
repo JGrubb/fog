@@ -1,4 +1,6 @@
 Fog::Application.routes.draw do
+  resources :teachers
+
   resources :announcements
 
   # The priority is based upon order of creation:
