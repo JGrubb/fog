@@ -8,6 +8,7 @@ gem 'rails', '3.2.7'
 gem 'pg'
 gem 'paperclip'
 gem 'friendly_id'
+gem 'thin'
 
 
 # Gems used only for assets and not required

@@ -1,5 +1,14 @@
 Fog::Application.routes.draw do
-  resources :pages
+  
+  controller :pages do
+    get ':id' => 'pages#show', :as => :page
+    get ':id/edit' => 'pages#edit', :as => :edit_page
+    post ':id/edit' => 'pages#update'
+    get 'pages/new' => 'pages#new', :as => :new_page
+    post 'pages' => 'pages#create'
+  end
+  
+  #resources :pages
 
   resources :teachers
 
