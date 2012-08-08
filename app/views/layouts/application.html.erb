@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div id="logo">
+      <%= link_to image_tag("fog-logo.png", :alt => "Fields of Green Montessori School", :title => "Home"), root_path %>
+    </div>
+    <%= render "layouts/nav" %>
+  </header>
 
 <%= yield %>
 
