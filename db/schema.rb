@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120808163651) do
+ActiveRecord::Schema.define(:version => 20120808180745) do
 
   create_table "announcements", :force => true do |t|
     t.text     "body"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(:version => 20120808163651) do
     t.string   "name"
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "assets", ["imageable_id"], :name => "index_assets_on_imageable_id"
