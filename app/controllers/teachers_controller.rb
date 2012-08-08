@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @teachers }
@@ -25,6 +25,7 @@ class TeachersController < ApplicationController
   # GET /teachers/new.json
   def new
     @teacher = Teacher.new
+    @teacher.picture.build
 
     respond_to do |format|
       format.html # new.html.erb
