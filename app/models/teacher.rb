@@ -1,4 +1,7 @@
 class Teacher < ActiveRecord::Base
-  attr_accessible :bio, :name, :imageable_attributes
+  
   has_one :picture, :as => :imageable
+  accepts_nested_attributes_for :picture
+  attr_accessible :bio, :name, :picture_attributes
+  
 end

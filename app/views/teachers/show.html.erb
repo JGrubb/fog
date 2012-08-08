@@ -10,6 +10,10 @@
   <%= @teacher.bio %>
 </p>
 
+<div id="name">
+  <%= debug @teacher %>
+</div>
+
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>

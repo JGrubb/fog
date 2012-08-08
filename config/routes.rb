@@ -1,5 +1,11 @@
 Fog::Application.routes.draw do
   
+  #resources :pages
+
+  resources :teachers
+
+  resources :announcements
+  
   controller :pages do
     get ':id' => 'pages#show', :as => :page
     get ':id/edit' => 'pages#edit', :as => :edit_page
@@ -7,12 +13,6 @@ Fog::Application.routes.draw do
     get 'pages/new' => 'pages#new', :as => :new_page
     post 'pages' => 'pages#create'
   end
-  
-  #resources :pages
-
-  resources :teachers
-
-  resources :announcements
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
