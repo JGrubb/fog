@@ -9,6 +9,7 @@ gem 'pg'
 gem 'paperclip'
 gem 'friendly_id'
 gem 'thin'
+gem 'aws-sdk'
 
 
 # Gems used only for assets and not required
