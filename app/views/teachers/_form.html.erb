@@ -20,9 +20,9 @@
     <%= f.text_area :bio %>
   </div>
   <div class="field">
-    <%= f.fields_for :picture do |p| %>
-      <%= p.label :picture, "Photo" %>
-      <%= p.file_field :picture %>
+    <%= f.fields_for :image do |p| %>
+      <%= p.label :image, "Photo" %>
+      <%= p.file_field :image %>
     <% end %>
   </div>
   <div class="actions">

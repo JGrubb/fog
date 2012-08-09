@@ -25,7 +25,7 @@ class TeachersController < ApplicationController
   # GET /teachers/new.json
   def new
     @teacher = Teacher.new
-    @teacher.picture.build
+    @teacher.build_image
 
     respond_to do |format|
       format.html # new.html.erb
