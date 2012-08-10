@@ -1,5 +1,11 @@
 Fog::Application.routes.draw do
   
+  get "users/new"
+
+  get "users/create"
+
+  get "users/show"
+
   #resources :pages
 
   resources :teachers
