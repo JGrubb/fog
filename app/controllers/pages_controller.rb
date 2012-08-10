@@ -1,14 +1,5 @@
 class PagesController < ApplicationController
-  # GET /pages
-  # GET /pages.json
-  def index
-    @pages = Page.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @pages }
-    end
-  end
+  before_filter :require_user, :except => ["show", "home"]
 
   # GET /pages/1
   # GET /pages/1.json
@@ -20,12 +11,22 @@ class PagesController < ApplicationController
       format.json { render json: @page }
     end
   end
+  
+  def home
+    @page = Page.find(2)
+    render :layout => 'home'
+  end
+  
+  def contact
+  end
 
   # GET /pages/new
   # GET /pages/new.json
   def new
+    
     @page = Page.new
-
+    3.times { @page.images.build }
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @page }

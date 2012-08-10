@@ -11,6 +11,7 @@ gem 'friendly_id'
 gem 'thin'
 gem 'aws-sdk'
 gem 'rmagick'
+gem 'redcarpet'
 
 
 # Gems used only for assets and not required

@@ -1,3 +1,24 @@
 // Place all the styles related to the Teachers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#teacher-detail
+  .image
+    float: left
+    margin-right: 1em
+    margin-bottom: 0.3em
+
+#teachers-index
+  overflow: auto
+  .teacher
+    &.left
+      @include grid(6, $alpha: true)
+    &.right
+      @include grid(6, $omega: true)
+    img
+      float: left
+      margin: 0 1em 0.3em 0
+      padding: 3px
+      background: #eee
+      border: 1px solid #bbb
+      @include radius(5px)

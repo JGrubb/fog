@@ -1,18 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @teacher.name %>
-</p>
-
-<p>
-  <b>Bio:</b>
-  <%= @teacher.bio %>
-</p>
-<div>
-  <%= image_tag @teacher.image.image.url(:medium)%>
+<div id="teacher-detail">
+  <h3>
+    <%= @teacher.name %>
+  </h3>
+  
+  <div class="image">
+    <%= image_tag @teacher.image.image.url(:medium)%>
+  </div>
+  
+  <div class="copy">
+    <%= dat_markdown(@teacher.bio) %>
+  </div>
+  
+  <% if current_user %>
+    <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+    <%= link_to 'Back', teachers_path %>
+  <% end %>
 </div>
-
-
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>

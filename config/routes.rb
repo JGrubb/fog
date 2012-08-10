@@ -3,9 +3,9 @@ Fog::Application.routes.draw do
   #resources :pages
   
   controller :sessions do
-    get 'login' => :new
+    get 'login' => :new, :as => :new_session
     post 'login' => :create
-    get 'logout' => :destroy
+    get 'logout' => :destroy, :as => :logout
   end
   
   controller :users do
@@ -23,6 +23,7 @@ Fog::Application.routes.draw do
     post ':id/edit' => 'pages#update'
     get 'pages/new' => 'pages#new', :as => :new_page
     post 'pages' => 'pages#create'
+    get 'contact' => 'pages#contact', :as => :contact_page
   end
 
   # The priority is based upon order of creation:

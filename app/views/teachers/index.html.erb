@@ -1,16 +1,23 @@
-<h1>Listing teachers</h1>
+<h1 class="page-title">our teachers</h1>
 
-<% @teachers.each do |teacher| %>
-  <div class="teacher">
-    <h3><%= teacher.name %></h3>
-    <div>
-      <%= teacher.bio %>
+<div id ="teachers-index">
+  <% @teachers.each do |teacher| %>
+    <div class="teacher <%= cycle('left', 'right')%>">
+      <h3><%= link_to teacher.name, teacher %></h3>
+      <div class="photo">
+        <%= image_tag teacher.image.image.url(:small) %>
+      </div>
+      <div class="bio">
+        <%= dat_markdown(truncate(teacher.bio, :length => 400)) %>
+      </div>
+      <% if current_user %>
+        <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
     </div>
-    <% render 'admin' %>
-  </div>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Teacher', new_teacher_path %>
+  <% end %>
+</div>
+<div>
+  <% if current_user %>
+    <%= link_to 'New Teacher', new_teacher_path %>
+  <% end %>
+</div>
