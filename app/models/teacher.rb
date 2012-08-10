@@ -9,4 +9,6 @@ class Teacher < ActiveRecord::Base
   
   accepts_nested_attributes_for :image
   
+  validates :name, :bio, :image, :presence => true
+  
 end

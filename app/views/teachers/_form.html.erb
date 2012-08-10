@@ -17,10 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
+    <%= f.text_area :bio, { :class => "span9" } %>
   </div>
   <div class="field">
     <%= f.fields_for :image do |p| %>
+      <%= image_tag @teacher.image.image.url(:thumb) %>
       <%= p.label :image, "Photo" %>
       <%= p.file_field :image %>
     <% end %>

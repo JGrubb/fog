@@ -1,7 +1,11 @@
 <!-- slide start -->
 <div id="slide-container"  class="clearfix">
 	<div id="slider-wrapper" class="left">
-		<div id="slider" class="nivoSlider"> <a href="http://themeforest.net?ref=population2" target="_blank"><img src="assets/stock/slide-image-1.jpg" alt="image 1" /></a> <a href="http://graphicriver.net?ref=population2" target="_blank"><img src="assets/stock/slide-image-2.jpg" alt="" title="This is slide image 2" /></a> <a href="http://codecanyon.net?ref=population2" target="_blank"><img src="assets/stock/slide-image-3.jpg" alt="" /></a> <img src="assets/stock/slide-image-4.jpg" alt="" title="#htmlcaption" /> </div>
+		<div id="slider" class="nivoSlider">
+		  <% @page.images.each do |i| %>
+		    <%= image_tag i.image.url(:home_slide) %>
+		  <% end %>
+		</div>
 		<div id="htmlcaption" class="nivo-html-caption"> Caption with <a href="#">a link</a>. </div>
 	</div>
 	<div id="quickmenu" class="left">
@@ -32,33 +36,21 @@
 	<div id="home-content" class="left">
 		<h2 class="replace">Our Commitment</h2>
 		<div class="intro">
-			<p>An active learning community is a dynamic entity that evolves
-      and changes over time, just like our natural ecosystems.
-      It calls all participants to be active and involved.
-      In order to remain a viable life force, we must always keenly
-      assess the surrounding environment and be able to adapt to
-      life's constant, which is change.
-      By embracing change instead of fighting it, we flow more
-      easily with the river that leads us into the future, which we
-      maintain will be a hopeful one.
-      By changing consciousness into conscience, we know that our 
-      world will become a better place.
-      Positive thought breeds positive action...</p>
+			<%= @page.body %>
+			<div>
+			  <% if current_user %>
+  		    <%= link_to "Edit", :controller => :pages, :action => :edit, :id => 2 %>
+  		  <% end %>
+			</div>
 		</div>
 		<hr />
-		<div class="col_201 alpha">
+		<div class="col_312 alpha">
 			<h3 class="replace">Our Approach</h3>
 			<div class="thumbnail_60_left" style="background: url("assets/stock/60x60_thumbnail_5.jpg") repeat;"></div>
 			<p class="landing_col">Nunc quis arcu. Donec ante. Gangsta placerizzle maurizzle stuff lectus. Fo pot eleifend leo malesuada fames ac turpis. </p>
 			<a href="#" class="fancy small">Learn More <img class="arrow" src="assets/nav-right-arrow.png"/></a><br/>
 		</div>
-		<div class="col_201">
-			<h3 class="replace">Active Learning</h3>
-			<div class="thumbnail_60_left" style="background: url("assets/stock/60x60_thumbnail_4.jpg") repeat;"></div>
-			<p class="landing_col">Nunc quis arcu. Donec ante. Gangsta placerizzle malesuada fames ac turpis egestas maurizzle stuff lectus. Fo shizzle pot ac turpis. </p>
-			<a href="#" class="fancy small">Learn More <img class="arrow" src="assets/nav-right-arrow.png"/></a><br/>
-		</div>
-		<div class="col_201 omega">
+		<div class="col_312 omega">
 			<h3 class="replace">Our School</h3>
 			<div class="thumbnail_60_left" style="background: url("assets/stock/60x60_thumbnail_6.jpg") repeat;"></div>
 			<p class="landing_col">Nunc quis arcu. Donec ante. Gangsta placerizzle stuff malesuada fames ac turpis egestas lectus. Fo shizzle pot tortor quam. </p>
@@ -76,7 +68,6 @@
 				</form>
 			</div>
 		</div>
-		<div class="sidebar-widget shadow-light"> <a href="#" class="promo-container"><img src="assets/stock/promo-245x162.jpg" alt="ad" /></a></div>
 		<div class="sidebar-widget shadow-light">
 			<div class="testimonials-container ">
 				<h3 class="replace">What they say</h3>
