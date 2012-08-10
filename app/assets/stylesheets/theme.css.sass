@@ -1,7 +1,3 @@
-/*
- *  ColorBox Core Style:
- *  The following CSS is consistent between example themes and should not be altered.
-
 #colorbox, #cboxOverlay, #cboxWrapper
   position: absolute
   top: 0
@@ -47,10 +43,6 @@
   display: block
   border: 0
 
-/* 
- *  User Style:
- *  Change the following styles to modify the appearance of ColorBox.  They are
- *  ordered & tabbed in a way that represents the nesting of the generated HTML.
 
 #cboxOverlay
   background: #000
@@ -163,16 +155,10 @@
   &.hover
     background-position: -25px -25px
 
-/*
- *The following fixes a problem where IE7+ replaces a PNG's alpha transparency with a black fill
- *when an alpha filter (opacity change) is set on the element or ancestor element.
-
 .cboxIE
   #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight, #cboxMiddleLeft, #cboxMiddleRight
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)
 
-/*
- *The following provides PNG transparency support for IE6
 
 .cboxIE6
   #cboxTopLeft
@@ -210,9 +196,7 @@
     z-index: 60
     display: none
 
-/* If an image is wrapped in a link
 
-/* The slices in the Slider
 
 .nivo-slice
   display: block
@@ -220,7 +204,6 @@
   z-index: 50
   height: 100%
 
-/* Caption styles
 
 .nivo-caption
   position: absolute
@@ -229,7 +212,7 @@
   background: #000
   color: #fff
   opacity: 0.8
-  /* Overridden by captionOpacity setting
+  // Overridden by captionOpacity setting
   width: 100%
   z-index: 89
   p
@@ -241,7 +224,7 @@
 .nivo-html-caption
   display: none
 
-/* Direction nav styles (e.g. Next & Prev)
+// Direction nav styles (e.g. Next & Prev)
 
 .nivo-directionNav a
   position: absolute
@@ -255,7 +238,7 @@
 .nivo-nextNav
   right: 0px
 
-/* Control nav styles (e.g. 1,2,3...)
+// Control nav styles (e.g. 1,2,3...)
 
 .nivo-controlNav a
   position: relative
@@ -263,7 +246,7 @@
   cursor: pointer
   &.active
     font-weight: bold
-/*
+//
  *Theme Name: Peekaboo
  *Theme URL: http://themeforest.net/user/population2/
  *Author: Population2
@@ -271,9 +254,9 @@
 
 @import url("../css/colorbox.css")
 
-/*  Import Colorbox style
+//  Import Colorbox style
 
-/*  The following reset is Erik Meyer CSS Reset
+//  The following reset is Erik Meyer CSS Reset
  *http://meyerweb.com/eric/tools/css/reset/
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
@@ -315,19 +298,19 @@ table
   border-collapse: collapse
   border-spacing: 0
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *1.	GLOBAL
  *
  *------------------------------------------------------------------
 
-/*-------------------------------
+//-------------------------------
  *Basic elements
  *-------------------------------
 
 body
   color: #444
-  /*Needed to eliminate scrollbars
+  //Needed to eliminate scrollbars
   font: 14px / 1.5 "Helvetica Neue", Arial, Helvetica, sans-serif
 
 h1, h2, h3, h4, h5, h6
@@ -533,7 +516,7 @@ q
   background: #0065d5
   color: #fff
 
-/* Buttons
+// Buttons
 
 .fancy:active, .carnival:active, .tape:active
   top: 1px
@@ -706,7 +689,7 @@ q
   &:hover
     background-color: #2B83AF
 
-/* Circular Thumbnails
+// Circular Thumbnails
 
 .thumbnail_60_left
   -webkit-border-radius: 31px
@@ -758,7 +741,7 @@ q
   margin-right: 0
   float: right
 
-/* Regular Thumbnails
+// Regular Thumbnails
 
 .alignleft
   margin-right: 12px
@@ -772,7 +755,7 @@ q
   margin-top: 6px
   float: right
 
-/* Rounded Corners
+// Rounded Corners
 
 .round_8
   -moz-border-radius: 8px !important
@@ -790,7 +773,7 @@ q
   -moz-border-radius: 2px !important
   -webkit-border-radius: 2px !important
 
-/* Utility
+// Utility
 
 .left
   float: left
@@ -834,7 +817,7 @@ q
   -moz-box-shadow: 0 2px 4px #DDD
   -webkit-box-shadow: 0 2px 4px #DDD
 
-/*-------------------------------
+//-------------------------------
  *Structure
  *-------------------------------
 
@@ -845,7 +828,7 @@ q
   top: 0
   z-index: 4
 
-/*Area to place content normally
+//Area to place content normally
 
 #container
   width: 960px
@@ -875,7 +858,7 @@ q
   -webkit-box-shadow: 1px 1px 6px rgba(102, 102, 102, 0.4)
 
 .col_212, .col_290, .col_445, .col_146, .col_201, .col_312, .col_240
-  /*display: inline;
+  //display: inline;
   float: left
   padding: 0 !important
   vertical-align: top
@@ -886,13 +869,13 @@ q
 .pad-left-10
   padding-left: 10px
 
-/*footer sidebar
+//footer sidebar
 
 .col_240
   width: 240px
   margin: 0 10px
 
-/*without 245px sidebar
+//without 245px sidebar
 
 .col_212
   width: 212px
@@ -906,7 +889,7 @@ q
   width: 445px
   margin: 0 10px
 
-/*with 245px sidebar
+//with 245px sidebar
 
 .col_312
   width: 312px
@@ -926,7 +909,7 @@ q
 .omega
   margin-right: 0
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *2.	HEADER
  *
@@ -944,7 +927,7 @@ q
   margin: 35px 0 0 5px
   float: left
 
-/*-------------------------------
+//-------------------------------
  *Navigation
  *-------------------------------
 
@@ -1015,7 +998,7 @@ q
       -webkit-box-shadow: 0 2px 2px #DDD
       box-shadow: 0 2px 2px #DDD
 
-/* arrows
+// arrows
 
 .sf-sub-indicator
   position: absolute
@@ -1035,13 +1018,13 @@ a
   &:focus .sf-sub-indicator, &:hover .sf-sub-indicator, &:active .sf-sub-indicator
     background-position: -10px -100px
 
-/* apply hovers to modern browsers
+// apply hovers to modern browsers
 
 li
   &:hover .sf-sub-indicator, &.sfHover .sf-sub-indicator
     background-position: -10px -100px
 
-/* point right for anchors in subs
+// point right for anchors in subs
 
 .sf-menu ul
   .sf-sub-indicator
@@ -1057,7 +1040,7 @@ li
     &:hover .sf-sub-indicator, &.sfHover .sf-sub-indicator
       background-position: -10px 0
 
-/* apply hovers to modern browsers
+// apply hovers to modern browsers
 
 ul.sf-menu li
   &:hover ul, &.sfHover ul
@@ -1073,7 +1056,7 @@ ul.sf-menu li
         left: 10em
         top: 0
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *3.	HOMEPAGE
  *
@@ -1085,7 +1068,7 @@ ul.sf-menu li
   position: relative
   z-index: 1
 
-/*-------------------------------
+//-------------------------------
  *The Nivo Slider Custom Styles
  *-------------------------------
 
@@ -1146,7 +1129,7 @@ a
     color: #efe9d1
     text-decoration: underline
 
-/*-------------------------------
+//-------------------------------
  *Quick Menu
  *-------------------------------
 
@@ -1235,7 +1218,7 @@ a
       font-size: 18px
       font-weight: bold
 
-/*-------------------------------
+//-------------------------------
  *Content
  *-------------------------------
 
@@ -1248,13 +1231,13 @@ a
 .landing_col
   margin-bottom: 8px
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *4.	SIDEBAR
  *
  *------------------------------------------------------------------
 
-/*-------------------------------
+//-------------------------------
  *Sidebar
  *-------------------------------
 
@@ -1321,7 +1304,7 @@ a
 .directions span
   font-size: 13px
 
-/* Sub navigation
+// Sub navigation
 
 ul#submenu
   padding: 0
@@ -1355,7 +1338,7 @@ ul.reg-item li
   padding: 0 0 10px 0
   list-style: url(/assets/list-bullet.jpg)
 
-/* Search
+// Search
 
 .search
   height: 30px
@@ -1377,7 +1360,7 @@ ul.reg-item li
       padding: 2px 0 0 12px
       border: 0
 
-/* Common
+// Common
 
 .sidebar-widget
   margin: 0 0 15px 0
@@ -1402,7 +1385,7 @@ ul.reg-item li
       a
         font-weight: bold
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *5.	FOOTER
  *
@@ -1463,7 +1446,7 @@ ul#social li
   display: block
   padding-left: 17px
 
-/* Map
+// Map
 
 #modalmap
   background: url(/assets/map-pin.png) no-repeat top left
@@ -1476,7 +1459,7 @@ a#modalmap:hover
   background: url(/assets/map-pin.png) no-repeat left 1px
   text-decoration: none
 
-/*Twitter feed
+//Twitter feed
 
 .pkb-tweet, .query
   color: #FFF
@@ -1497,17 +1480,17 @@ a#modalmap:hover
   .tweet_time, .tweet_join
     font-style: normal
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *6.	SECTIONS
  *
  *------------------------------------------------------------------
 
-/*-------------------------------
+//-------------------------------
  *Common
  *-------------------------------
 
-/*---Page Title---
+//---Page Title---
 
 .page_title
   background: #dff0f5
@@ -1544,7 +1527,7 @@ a#modalmap:hover
   h1
     color: #0082c0
 
-/*---Landing Page---
+//---Landing Page---
 
 .landing_img img
   margin: 0 0 18px 0
@@ -1553,7 +1536,7 @@ a#modalmap:hover
   -moz-box-shadow: 0 1px 5px rgba(102, 102, 102, 0.7)
   -webkit-box-shadow: 0 1px 5px rgba(102, 102, 102, 0.7)
 
-/*---Gallery---
+//---Gallery---
 
 .gallery_module
   margin: 0 0 12px
@@ -1573,7 +1556,7 @@ a#modalmap:hover
   a:hover img
     border: 1px solid #BFBFBF
 
-/*---Testimonials---
+//---Testimonials---
 
 .quote-post
   font-size: 16px
@@ -1586,7 +1569,7 @@ a#modalmap:hover
   color: #666
   font-weight: bold
 
-/*-------------------------------
+//-------------------------------
  *Blog Page
  *-------------------------------
 
@@ -1666,7 +1649,7 @@ a#modalmap:hover
       background: url(/assets/comment-bg.png) no-repeat scroll left bottom
       text-decoration: none
 
-/*---Comment---
+//---Comment---
 
 ul.comment_list
   padding-left: 0
@@ -1701,7 +1684,7 @@ ul.comment_list
   width: 300px
   padding: 0 10px 15px 0
 
-/*-------------------------------
+//-------------------------------
  *About Page
  *-------------------------------
 
@@ -1715,7 +1698,7 @@ ul.comment_list
     font-style: italic
     font-size: 12px
 
-/*-------------------------------
+//-------------------------------
  *Contact Page
  *-------------------------------
 
@@ -1751,7 +1734,7 @@ p
     color: #3F9153
     font-style: italic
 
-/*-------------------------------
+//-------------------------------
  *Supersized
  *-------------------------------
 
@@ -1787,23 +1770,18 @@ p
     -ms-interpolation-mode: bicubic
     image-rendering: optimizeQuality
 
-/*------------------------------------------------------------------
+//------------------------------------------------------------------
  *
  *7.	MEDIA QUERIES
  *
  *------------------------------------------------------------------
 
-/* Needed to fix sticky background on mobile devices
+// Needed to fix sticky background on mobile devices
 @media screen and (min-width: 1024px)
   body
     overflow: hidden
   #content-wrapper
     overflow: scroll
-/*
- *Theme Name: Peekaboo
- *Theme URL: http://themeforest.net/user/population2/
- *Author: Population2
- *Version: 1.2
 
 h1, h2, h3, h4, h5, h6
   color: #007cc3
@@ -1823,7 +1801,7 @@ a
 #main
   background: #f2f2f2
 
-/*---Header---
+//---Header---
 
 .sf-menu
   background: url(/assets/nav-mid-bg-2.jpg) repeat-x bottom
@@ -1841,7 +1819,7 @@ a
       -webkit-box-shadow: 2px 2px 2px #505050
       box-shadow: 2px 2px 2px #505050
 
-/*---Quick Menu---
+//---Quick Menu---
 
 #quickmenu
   border: 1px solid #577909
@@ -1868,7 +1846,7 @@ a
     &.title
       color: #494242
 
-/*---Sidebar---
+//---Sidebar---
 
 .testimonials-container
   background: #dadf8b url(/assets/chat.png) no-repeat 10px 10px
@@ -1881,7 +1859,7 @@ a
   color: #6A930B
   text-decoration: none
 
-/*.sub-nav li a:hover { background: #C2DFEF url(/assets/left_arrow_16px.png) no-repeat left center; }
+//.sub-nav li a:hover { background: #C2DFEF url(/assets/left_arrow_16px.png) no-repeat left center; }
  *.sub-nav li.active a { background: url(/assets/nav-mid-bg-2.png) repeat-x 4px; color: #FFF; }
 
 ul#submenu
@@ -1900,7 +1878,7 @@ ul#submenu
 ul.reg-item li
   list-style: url(/assets/list-bullet-2.jpg)
 
-/*---Footer---
+//---Footer---
 
 #footer
   background: url(/assets/footer-bg-2.jpg) no-repeat top center #e6ae11
@@ -1945,7 +1923,7 @@ ul#twitter_update_list li
     a
       color: #1c6de7
 
-/*---Misc---
+//---Misc---
 
 .page_title
   background: #bed600
