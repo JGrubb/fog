@@ -53,7 +53,7 @@ jQuery(function($) {
 
 	
 	// Google Map
-	$("#modalmap").colorbox({iframe:true, innerWidth:"50%", innerHeight:"50%", href:" http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=476+Whitehall+Street+Atlanta,+GA+30303&amp;aq=&sll=33.743594,-84.405288&sspn=0.006129,0.013733&ie=UTF8&hq=&hnear=476+Whitehall+St+SW,+Atlanta,+Georgia+30303&t=h&amp;ll=33.743527,-84.403068&amp;spn=0.02498,0.036478&amp;z=14&iwloc=A&output=embed" });
+	$("#modalmap").colorbox({iframe:true, innerWidth:"50%", innerHeight:"50%", href:"http://maps.google.com/maps?q=58+Sand+Hill+Road,+Vernon,+NJ&hl=en&ll=41.205781,-74.507561&spn=0.043846,0.075531&sll=40.07304,-74.724323&sspn=5.707596,9.667969&oq=58+Sand+Hill+road+Vernon&hnear=58+Sand+Hill+Rd,+Vernon,+Sussex,+New+Jersey+07461&t=m&z=14&iwloc=A&iwloc=A&output=embed" });
 });
 
 
