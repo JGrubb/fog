@@ -1,12 +1,17 @@
 Fog::Application.routes.draw do
-  
-  get "users/new"
-
-  get "users/create"
-
-  get "users/show"
 
   #resources :pages
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    get 'logout' => :destroy
+  end
+  
+  controller :users do
+    get 'users/new' => 'users#new'
+    post 'users' => 'users#create'
+  end
 
   resources :teachers
 
