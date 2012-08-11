@@ -1,13 +1,6 @@
-<div class="interior">
-  <p id="notice"><%= notice %></p>
-
-  <h1>
-    <%= @page.title %>
-  </h1>
-
-  <div>
-    <%= @page.body %>
-  </div>
-
-  <%= render "admin" %>
+<h1 class="replace"><%= @page.title %></h1>
+<div class="post">
+  <%= @page.body %>
 </div>
+  <p id="notice"><%= notice %></p>
+  <%= render "admin" %>

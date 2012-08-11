@@ -1,0 +1,39 @@
+<div id="main" class="round_8 clearfix">
+  <div id="content" class="left">
+    <%= yield %>
+  </div>
+  <div  id="sidebar" class="left">
+		<ul id="submenu" class="shadow-light">
+			<li> <a href="/teachers"><span>Teacher</span></a></li>
+			<li> <a href="/blog"><span>Blog</span></a></li>
+			<li> <a href="/contact"><span>Contact</span></a></li>
+			<li> <a href="/testimonials"><span>Testimonials</span></a></li>
+		</ul>
+
+    <div class="sidebar-widget shadow-light">
+        <div class="minimal">
+            <h4 class="replace">In the News</h4>
+            <ul class="reg-item">
+                <li><a href="#">Bonding with Your Children's Teacher</a><br />
+                    <span class="meta"><em>Themeforest.com</em></span></li>
+                <li><a href="#">The Challenge of Child Care</a><br />
+                    <span class="meta"><em>Enterpreneur.com</em></span></li>
+                <li><a href="#">Choosing A Child Care Option For Your Family</a><br />
+                    <span class="meta"><em>WUCF.com</em></span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="sidebar-widget">
+          <div class="search">
+              <form action="search.html" method="post">
+                  <div>
+                      <input name="text" type="text"  class="search-field" alt="Search" />
+                      <input name="submit" type="image" class="search-submit" value="search" src="img/search.png" />
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<%= parent_layout 'application' %>
