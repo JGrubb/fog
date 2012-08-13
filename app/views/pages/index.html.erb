@@ -1,0 +1,9 @@
+<h1 class="blue round_6">pages</h1>
+
+<div id ="pages-index">
+  <% @pages.each do |page| %>
+    <div>
+      <%= link_to page.title, page %>
+    </div>
+  <% end %>
+</div>
