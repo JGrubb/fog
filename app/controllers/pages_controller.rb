@@ -19,6 +19,7 @@ class PagesController < ApplicationController
   
   def home
     @page = Page.find(2)
+    @announcement = Announcement.last
     render :layout => 'home'
   end
   
