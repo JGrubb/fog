@@ -1,14 +1,14 @@
-<h1 class="page-title">our teachers</h1>
+<h1 class="blue round_6">Our Teachers</h1>
 
 <div id ="teachers-index">
   <% @teachers.each do |teacher| %>
-    <div class="teacher <%= cycle('left', 'right')%>">
+    <div class="teacher col_312 <%= cycle('alpha', 'omega')%>">
       <h3><%= link_to teacher.name, teacher %></h3>
-      <div class="photo">
+      <div class="image">
         <%= image_tag teacher.image.image.url(:small) %>
       </div>
       <div class="bio">
-        <%= dat_markdown(truncate(teacher.bio, :length => 400)) %>
+        <%= dat_markdown(truncate(teacher.bio, :length => 260, :separator => ' ')) %>
       </div>
       <% if current_user %>
         <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>

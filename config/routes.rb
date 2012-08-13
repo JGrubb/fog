@@ -17,7 +17,7 @@ Fog::Application.routes.draw do
 
   resources :announcements
       
-  resources :blog
+  resources :blogs
   
   controller :pages do
     get ':id' => 'pages#show', :as => :page

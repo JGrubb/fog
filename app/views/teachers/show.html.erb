@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div id="teacher-detail">
-  <h3>
+  <h3 class="page_title round_6 blue">
     <%= @teacher.name %>
   </h3>
   
-  <div class="image">
+  <div class="image col_445">
     <%= image_tag @teacher.image.image.url(:medium)%>
   </div>
   
-  <div class="copy">
+  <div class="copy col_445">
     <%= dat_markdown(@teacher.bio) %>
   </div>
   
