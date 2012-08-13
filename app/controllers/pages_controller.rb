@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
   before_filter :require_user, :except => ["show", "home"]
 
+
+  def index
+    @pages = Page.all
+  end
+  
   # GET /pages/1
   # GET /pages/1.json
   def show
