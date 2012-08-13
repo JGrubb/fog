@@ -20,12 +20,13 @@ Fog::Application.routes.draw do
   resources :blogs
   
   controller :pages do
+    get 'pages' => 'pages#index', :as => :pages_path
+    get 'contact' => 'pages#contact', :as => :contact_page
     get ':id' => 'pages#show', :as => :page
     get ':id/edit' => 'pages#edit', :as => :edit_page
-    post ':id/edit' => 'pages#update'
+    put ':id' => 'pages#update'
     get 'pages/new' => 'pages#new', :as => :new_page
     post 'pages' => 'pages#create'
-    get 'contact' => 'pages#contact', :as => :contact_page
   end
 
   # The priority is based upon order of creation:
