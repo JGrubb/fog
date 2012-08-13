@@ -7,18 +7,18 @@
     float: left
     margin-right: 1em
     margin-bottom: 0.3em
+    img
+      max-width: 100%
 
 #teachers-index
   overflow: auto
   .teacher
-    &.left
-      @include grid(6, $alpha: true)
-    &.right
-      @include grid(6, $omega: true)
-    img
+    .image
       float: left
       margin: 0 1em 0.3em 0
       padding: 3px
       background: #eee
       border: 1px solid #bbb
       @include radius(5px)
+    .bio
+      text-align: justify

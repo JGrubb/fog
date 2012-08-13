@@ -5,7 +5,7 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
     
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :layout => "pages"}
       format.json { render json: @teachers }
     end
   end
