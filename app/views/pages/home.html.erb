@@ -36,7 +36,7 @@
 	<div id="home-content" class="left">
 		<h2 class="replace">Our Commitment</h2>
 		<div class="intro">
-			<%= @page.body %>
+			<%= dat_markdown(@page.body) %>
 			<div>
 			  <% if current_user %>
   		    <%= link_to "Edit", :controller => :pages, :action => :edit, :id => 2 %>
