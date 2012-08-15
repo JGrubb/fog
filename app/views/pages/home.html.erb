@@ -12,10 +12,10 @@
 		<h2 class="replace">Our Programs</h2>
 		<div class="viewport">
 			<ul class="overview">
-				<li><a href="#" class="menu-box round_4"> <span class="title">Infant</span><br/>
-					Duis lobortis fermentum erat<span class="arrow"></span> </a></li>
-				<li><a href="#" class="menu-box round_4"> <span class="title">Toddler</span><br/>
-					Vivamus viverra arcu pretium<span class="arrow"></span> </a></li>
+				<li><a href="/seedlings" class="menu-box round_4"> <span class="title">Seedlings</span><br/>
+					Ages 18 months to 2 1/2 years<span class="arrow"></span> </a></li>
+				<li><a href="/sprouts" class="menu-box round_4"> <span class="title">Sprouts</span><br/>
+					Ages 3 to 6 years<span class="arrow"></span> </a></li>
 				<li><a href="#" class="menu-box round_4"> <span class="title">Early Preschool</span><br/>
 					Praesent fringilla rutrum augue<span class="arrow"></span> </a></li>
 				<li><a href="#" class="menu-box round_4"> <span class="title">Preschool</span><br/>
@@ -34,7 +34,7 @@
 <!-- Main begin-->
 <div id="main" class="round_8 clearfix">
 	<div id="home-content" class="left">
-		<h2 class="replace">Our Commitment</h2>
+		<h2 class="replace"><%= @page.title %></h2>
 		<div class="intro">
 			<%= dat_markdown(@page.body) %>
 			<div>

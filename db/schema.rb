@@ -11,55 +11,56 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811122617) do
+ActiveRecord::Schema.define(:version => 20120814191047) do
 
   create_table "announcements", :force => true do |t|
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "title"
+    t.text      "body"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
+    t.string    "title"
   end
 
   create_table "assets", :force => true do |t|
-    t.string   "name"
-    t.integer  "imageable_id"
-    t.string   "imageable_type"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string    "name"
+    t.integer   "imageable_id"
+    t.string    "imageable_type"
+    t.timestamp "created_at",         :null => false
+    t.timestamp "updated_at",         :null => false
+    t.string    "image_file_name"
+    t.string    "image_content_type"
+    t.integer   "image_file_size"
+    t.timestamp "image_updated_at"
+    t.string    "caption"
   end
 
   add_index "assets", ["imageable_id"], :name => "index_assets_on_imageable_id"
 
   create_table "pages", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "slug"
-    t.string   "page_type"
+    t.string    "title"
+    t.text      "body"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
+    t.string    "slug"
+    t.string    "page_type"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "teachers", :force => true do |t|
-    t.string   "name"
-    t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "slug"
+    t.string    "name"
+    t.text      "bio"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
+    t.string    "slug"
   end
 
   add_index "teachers", ["slug"], :name => "index_teachers_on_slug"
 
   create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string    "email"
+    t.string    "password_digest"
+    t.timestamp "created_at",      :null => false
+    t.timestamp "updated_at",      :null => false
   end
 
 end
