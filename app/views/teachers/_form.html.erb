@@ -21,7 +21,6 @@
   </div>
   <div class="field">
     <%= f.fields_for :image do |p| %>
-      <%= image_tag @teacher.image.image.url(:thumb) %>
       <%= p.label :image, "Photo" %>
       <%= p.file_field :image %>
     <% end %>
