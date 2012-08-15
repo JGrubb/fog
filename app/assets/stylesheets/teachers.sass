@@ -17,12 +17,16 @@
 #teachers-index
   overflow: auto
   .teacher
+    margin-bottom: 2em
     .image
       float: left
-      margin: 0 1em 0.3em 0
-      padding: 3px
-      background: #eee
-      border: 1px solid #bbb
-      @include radius(5px)
+      img
+        margin: 0 0.7em 0.3em 0
+        padding: 3px
+        background: #eee
+        border: 1px solid #bbb
+        @include radius(5px)
     .bio
-      text-align: justify
+      //text-align: justify
+    &.alpha
+      clear: left

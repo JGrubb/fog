@@ -4,9 +4,11 @@
   <% @teachers.each do |teacher| %>
     <div class="teacher col_312 <%= cycle('alpha', 'omega')%>">
       <h3><%= link_to teacher.name, teacher %></h3>
+      <% if teacher.image %>
       <div class="image">
         <%= image_tag teacher.image.image.url(:small) %>
       </div>
+      <% end %>
       <div class="bio">
         <%= dat_markdown(truncate(teacher.bio, :length => 260, :separator => ' ', :omission => link_to('...more', teacher))) %>
       </div>
