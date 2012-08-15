@@ -1,55 +1,6 @@
 /*jQuery.noConflict();*/
 jQuery(function($) {
 
-  // Superfish
-  $("ul.sf-menu").supersubs({
-    minWidth: 10,
-    // minimum width of sub-menus in em units 
-    maxWidth: 25,
-    // maximum width of sub-menus in em units 
-    extraWidth: 1 // extra width can ensure lines don't sometimes turn over 
-    // due to slight rounding differences and font-family 
-  }).superfish({
-    delay: 300,
-    dropShadows: false
-  }); // call supersubs first, then superfish, so that subs are 
-  // not display:none when measuring. Call before initialising 
-  // containing tabs for same reason. 
-
-  // Full page background
-  $.supersized({
-    //Background image
-    slides: [{
-      image: '/assets/bg3.jpg'
-    }]
-  });
-
-
-  // Cufon
-  Cufon.replace('.replace,.sidebar-widget h4', {
-    fontFamily: 'Museo 500'
-  });
-  Cufon.replace('.sf-menu a', {
-    fontFamily: 'Museo Sans 500'
-  });
-
-  // ColorBox
-  $(".video_modal").colorbox({
-    iframe: true,
-    innerWidth: "50%",
-    innerHeight: "50%"
-  });
-  $("a[rel='example1']").colorbox();
-  $("a[rel='example2']").colorbox({
-    transition: "fade"
-  });
-  $("a[rel='example3']").colorbox({
-    transition: "none"
-  });
-  $("a[rel='example4']").colorbox({
-    slideshow: true
-  });
-
   // Google Map
   $("#modalmap").colorbox({
     iframe: true,
