@@ -1,7 +1,7 @@
 <!-- slide start -->
 <div id="slide-container"  class="clearfix">
 	<div id="slider-wrapper" class="left">
-		<div id="slider" class="nivoSlider">
+		<div id="slideshow">
 		  <% @page.images.each do |i| %>
 		    <%= image_tag i.image.url(:home_slide) %>
 		  <% end %>
@@ -33,42 +33,18 @@
 <!-- slide end --> 
 <!-- Main begin-->
 <div id="main" class="round_8 clearfix">
-	<div id="home-content" class="left">
+	<div class="left col_645">
 		<h2 class="replace"><%= @page.title %></h2>
 		<div class="intro">
 			<%= dat_markdown(@page.body) %>
 			<div>
 			  <% if current_user %>
-  		    <%= link_to "Edit", :controller => :pages, :action => :edit, :id => 2 %>
+  		    <%= link_to "Edit", edit_page_path(@page) %>
   		  <% end %>
 			</div>
 		</div>
-		<hr />
-		<div class="col_312 alpha">
-			<h3 class="replace">Announcements</h3>
-			<div id="name">
-			 <%= @announcement.body %>
-			</div>
-      <%= link_to "Read more...", @announcement, {:class => "small fancy"} %>
-		</div>
-		<div class="col_312 omega">
-			<h3 class="replace">Our School</h3>
-			<div class="thumbnail_60_left" style="background: url("assets/stock/60x60_thumbnail_6.jpg") repeat;"></div>
-			<p class="landing_col">Nunc quis arcu. Donec ante. Gangsta placerizzle stuff malesuada fames ac turpis egestas lectus. Fo shizzle pot tortor quam. </p>
-			<a href="#" class="fancy small">Learn More <img class="arrow" src="assets/nav-right-arrow.png"/></a><br/>
-		</div>
-	</div>
-	<div  id="sidebar-home" class="left">
-		<div class="sidebar-widget">
-			<div class="search">
-				<form action="search.html" method="post">
-					<div>
-						<input name="text" type="text"  class="search-field" alt="Search" />
-						<input name="submit" type="image" class="search-submit" value="search" src="assets/search.png" />
-					</div>
-				</form>
-			</div>
-		</div>
+  </div>
+	<div class="left sidebar">
 		<div class="sidebar-widget shadow-light">
 			<div class="testimonials-container ">
 				<h3 class="replace">What they say</h3>
@@ -77,5 +53,19 @@
 			</div>
 		</div>
 	</div>
+	<hr class="pad clear-float" />
+	<div class="col_312">
+		<h3 class="replace">Announcements</h3>
+		<div id="name">
+		 <%= @announcement.body %>
+		</div>
+    <%= link_to "Read more...", @announcement, {:class => "small fancy"} %><br />
+    <% if current_user %>
+      <%= link_to "edit", edit_announcement_path(@announcement) %>
+	  <% end %>
+  </div>
+  <div class="col_577">
+    <iframe width="577" height="325" src="http://www.youtube.com/embed/GcgN0lEh5IA" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
 <!-- Main end -->
