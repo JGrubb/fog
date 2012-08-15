@@ -4,9 +4,11 @@
     <%= @teacher.name %>
   </h3>
   
+<% if @teacher.image %>
   <div class="image col_445">
     <%= image_tag @teacher.image.image.url(:medium)%>
   </div>
+<% end %>
   
   <div class="copy">
     <%= dat_markdown(@teacher.bio) %>
