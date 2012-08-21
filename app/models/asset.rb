@@ -1,6 +1,6 @@
 class Asset < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible :image
+  attr_accessible :image, :caption
   belongs_to :imageable, :polymorphic => true
   has_attached_file :image, :styles => {
     :home_slide => "680x320#",

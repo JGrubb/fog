@@ -19,18 +19,21 @@
     <%= f.label :body %><br />
     <%= f.text_area :body, {:class => "span8"} %>
   </div>
-  <div class="field">
+  <div class="field items">
     <%= f.nested_fields_for :images do |image| %>
-      <div class="nested-image">
+      <div class="item">
         <%= image.label :image %>
         <%= image.file_field :image %>
+        <%= image.label :caption %>
+        <%= image.text_field :caption %>
         <%= link_to "Remove", "#", { :class => 'remove' } %>
         <%= image.hidden_field :id %>
         <%= image.hidden_field :_destroy %>
       </div>
     <% end %>
-    <%= link_to "Add image", "#", { :class => 'add' } %>
   </div>
+  <%= link_to "Add image", "#", { :class => 'add' } %>
+
  
   <div class="actions">
     <%= f.submit %>

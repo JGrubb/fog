@@ -1,6 +1,11 @@
 /*jQuery.noConflict();*/
 jQuery(function($) {
 
+  $('a.slideshow').colorbox({
+    rel: "slideshow",
+    transition: "fade"
+  });
+
   // Google Map
   $("#modalmap").colorbox({
     iframe: true,
