@@ -25,8 +25,11 @@
     <% end %>
   </div>
   <%= link_to "Add image", "#", { :class => 'add' } %>
-
- 
+  
+  <div class="field">
+    <%= f.check_box :gallery %>
+    <%= f.label :gallery, "Is Gallery?", { class: "gallery" } %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

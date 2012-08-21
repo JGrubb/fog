@@ -1,14 +1,14 @@
       <% if image.object.new_record? %>
-        <div class="item">
+        <div class="item <%= cycle('even', 'odd') %>">
           <%= image.file_field :image %>
-          <%= link_to "Remove", "#", { :class => 'remove' } %>
-          <%= image.label :caption %>
+          <%= image.label :caption, "Caption (optional)", { class: "caption" } %>
           <%= image.text_field :caption %>
+          <%= link_to "Remove image", "#", { :class => 'remove' } %>
           <%= image.hidden_field :id %>
           <%= image.hidden_field :_destroy %>
         </div>
       <% else %>
-        <div class="item">
+        <div class="item <%= cycle('even', 'odd') %>">
           <%= image_tag image.object.image.url(:thumb) %>
           <%= link_to "Remove", "#i", { :class => "remove" } %>
           <%= image.hidden_field :id %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814191047) do
+ActiveRecord::Schema.define(:version => 20120821204253) do
 
   create_table "announcements", :force => true do |t|
     t.text      "body"
@@ -36,12 +36,13 @@ ActiveRecord::Schema.define(:version => 20120814191047) do
   add_index "assets", ["imageable_id"], :name => "index_assets_on_imageable_id"
 
   create_table "pages", :force => true do |t|
-    t.string    "title"
-    t.text      "body"
-    t.timestamp "created_at", :null => false
-    t.timestamp "updated_at", :null => false
-    t.string    "slug"
-    t.string    "page_type"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "slug"
+    t.string   "page_type"
+    t.boolean  "gallery",    :default => false
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
