@@ -4,9 +4,9 @@ class Page < ActiveRecord::Base
   
   validates :title, :body, :presence => true
   
-  has_many :images, :as => :imageable, :class_name => "Asset", :dependent => :destroy
+  has_many :images, as: :imageable, class_name: "Asset", dependent: :destroy
   
-  accepts_nested_attributes_for :images, :reject_if => lambda { |i| i[:image].blank?  }
+  accepts_nested_attributes_for :images, :reject_if => lambda { |i| i[:image].blank?  }, allow_destroy: true
   
   extend FriendlyId
   friendly_id :title, use: :slugged

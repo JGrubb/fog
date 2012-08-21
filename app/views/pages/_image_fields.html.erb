@@ -1,4 +1,17 @@
-<div class="nested-images">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-</div>
+      <% if image.object.new_record? %>
+        <div class="item">
+          <%= image.file_field :image %>
+          <%= link_to "Remove", "#", { :class => 'remove' } %>
+          <%= image.label :caption %>
+          <%= image.text_field :caption %>
+          <%= image.hidden_field :id %>
+          <%= image.hidden_field :_destroy %>
+        </div>
+      <% else %>
+        <div class="item">
+          <%= image_tag image.object.image.url(:thumb) %>
+          <%= link_to "Remove", "#i", { :class => "remove" } %>
+          <%= image.hidden_field :id %>
+          <%= image.hidden_field :_destroy %>
+        </div>
+      <% end %>
