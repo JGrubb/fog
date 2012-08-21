@@ -2,25 +2,38 @@
   <div id="content" class="left">
     <%= yield %>
   </div>
-  <div  id="sidebar" class="left">
-		<ul id="submenu" class="shadow-light">
-			<li><a href="/teachers"><span>Teachers</span></a></li>
-			<li><a href="/contact"><span>Contact</span></a></li>
-			<li><a href="/testimonials"><span>Testimonials</span></a></li>
-		</ul>
-
+  <div id="sidebar" class="left">
+    <ul id="submenu" class="shadow-light">
+      <li>
+        <a href="/teachers"><span>Teachers</span></a>
+      </li>
+      <li>
+        <a href="/contact"><span>Contact</span></a>
+      </li>
+      <li>
+        <a href="/testimonials"><span>Testimonials</span></a>
+      </li>
+    </ul>
     <div class="sidebar-widget shadow-light">
-        <div class="minimal">
-            <h4 class="replace">In the News</h4>
-            <ul class="reg-item">
-                <li><a href="#">Bonding with Your Children's Teacher</a><br />
-                    <span class="meta"><em>Themeforest.com</em></span></li>
-                <li><a href="#">The Challenge of Child Care</a><br />
-                    <span class="meta"><em>Enterpreneur.com</em></span></li>
-                <li><a href="#">Choosing A Child Care Option For Your Family</a><br />
-                    <span class="meta"><em>WUCF.com</em></span></li>
-            </ul>
-        </div>
+      <div class="minimal">
+        <h4 class="replace">
+          In the News
+        </h4>
+        <ul class="reg-item">
+          <li>
+            <a href="#">Bonding with Your Children's Teacher</a><br>
+            <span class="meta"><em>Themeforest.com</em></span>
+          </li>
+          <li>
+            <a href="#">The Challenge of Child Care</a><br>
+            <span class="meta"><em>Enterpreneur.com</em></span>
+          </li>
+          <li>
+            <a href="#">Choosing A Child Care Option For Your Family</a><br>
+            <span class="meta"><em>WUCF.com</em></span>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
-<%= parent_layout 'application' %>
+  </div>
+</div><%= parent_layout 'application' %>

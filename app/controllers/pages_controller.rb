@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1.json
   def show
     @page = Page.find(params[:id])
+    @page.images.build
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,7 +43,6 @@ class PagesController < ApplicationController
   # GET /pages/1/edit
   def edit
     @page = Page.find(params[:id])
-    @page.images.build
   end
 
   # POST /pages

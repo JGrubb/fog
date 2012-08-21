@@ -21,15 +21,7 @@
   </div>
   <div class="field items">
     <%= f.nested_fields_for :images do |image| %>
-      <div class="item">
-        <%= image.label :image %>
-        <%= image.file_field :image %>
-        <%= image.label :caption %>
-        <%= image.text_field :caption %>
-        <%= link_to "Remove", "#", { :class => 'remove' } %>
-        <%= image.hidden_field :id %>
-        <%= image.hidden_field :_destroy %>
-      </div>
+      <%= render "image_fields", :image => image %>
     <% end %>
   </div>
   <%= link_to "Add image", "#", { :class => 'add' } %>
