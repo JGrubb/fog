@@ -5,9 +5,8 @@ class Asset < ActiveRecord::Base
   has_attached_file :image, :styles => {
     :home_slide => "680x320#",
     :large => "600x800",
-    :medium => "240x300",
-    :small => "150x200",
-    :thumb => "100x100"
+    :medium => "204x270",
+    :thumb => "80x80"
   },
   :storage => :s3,
   :s3_credentials => {

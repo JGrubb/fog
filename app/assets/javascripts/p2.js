@@ -2,8 +2,7 @@
 jQuery(function($) {
 
   $('a.slideshow').colorbox({
-    rel: "slideshow",
-    transition: "fade"
+    rel: "slideshow"
   });
 
   // Google Map
