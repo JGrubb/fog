@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120821204253) do
+ActiveRecord::Schema.define(:version => 20120821212605) do
 
   create_table "announcements", :force => true do |t|
     t.text      "body"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(:version => 20120821204253) do
   end
 
   add_index "assets", ["imageable_id"], :name => "index_assets_on_imageable_id"
+
+  create_table "occurrences", :force => true do |t|
+    t.datetime "starts"
+    t.datetime "ends"
+    t.integer  "interval"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "occurrences", ["event_id"], :name => "index_occurrences_on_event_id"
 
   create_table "pages", :force => true do |t|
     t.string   "title"
