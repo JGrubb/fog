@@ -31,7 +31,7 @@ class PagesController < ApplicationController
   def new
     
     @page = Page.new
-    3.times { @page.images.build }
+    @page.images.build
     
     respond_to do |format|
       format.html # new.html.erb

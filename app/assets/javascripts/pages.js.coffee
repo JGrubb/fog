@@ -4,3 +4,4 @@
 
 $(document).ready ->
   $('#slideshow').cycle()
+  $('.pages-form').nestedFields()

@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require cocoon
+//= require jquery.nested-fields
 //= require_tree .
 
