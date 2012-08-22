@@ -1,17 +1,21 @@
-<h1 class="replace"><%= @page.title %></h1>
-<div class="post">
-  <%= dat_markdown(@page.body) %>
-  <% if @page.gallery %>
-    <div id="gallery">
-      <% @page.images.each do |image| %>
-      <div class="col_201">
-        <div class="gallery_module">
-          <%= link_to(image_tag(image.image.url(:small)), image.image.url(:large), { :title => image.caption, :class => "slideshow" }) unless image.id.blank? %>
-        </div>
-      </div>
-      <% end %>
-    </div>
-  <% end %>
+<div class="page_title round_6">
+  <h1 class="replace"><%= @page.title %></h1>
 </div>
-  <p id="notice" class="clear-float"><%= notice %></p>
-  <%= render "pages/admin" %>
+<div id="content" class="left">
+  <div class="post">
+    <%= dat_markdown(@page.body) %>
+    <% if @page.gallery %>
+      <div id="gallery">
+        <% @page.images.each do |image| %>
+        <div class="col_201">
+          <div class="gallery_module">
+            <%= link_to(image_tag(image.image.url(:small)), image.image.url(:large), { :title => image.caption, :class => "slideshow" }) unless image.id.blank? %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+    <p id="notice" class="clear-float"><%= notice %></p>
+    <%= render "pages/admin" %>
+</div>
