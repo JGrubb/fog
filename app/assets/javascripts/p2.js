@@ -5,6 +5,12 @@ jQuery(function($) {
     rel: "slideshow"
   });
 
+  $('.post p a').each(function(){
+   // console.log($(this));
+    if ($(this).children('img').length) {
+      $(this).colorbox();
+    }
+  });
   // Google Map
   $("#modalmap").colorbox({
     iframe: true,
