@@ -1,18 +1,14 @@
 <h1 class="replace"><%= @page.title %></h1>
 <div class="post">
-  <% if @page.images.count == 1 %>
-  <div class="image">
-    <%= image_tag @page.images.first.image.url(:medium), { :title => @page.images.first.caption, :class => "page-single" } %>
-    <p class="caption"><%= @page.images.first.caption %></p>
-  </div>
-  <% end %>
   <%= dat_markdown(@page.body) %>
   <% if @page.gallery %>
     <div id="gallery">
       <% @page.images.each do |image| %>
-        <div class="gallery-image">
-          <%= link_to(image_tag(image.image.url(:thumb)), image.image.url(:large), { :title => image.caption, :class => "slideshow" }) unless image.id.blank? %>
+      <div class="col_201">
+        <div class="gallery_module">
+          <%= link_to(image_tag(image.image.url(:small)), image.image.url(:large), { :title => image.caption, :class => "slideshow" }) unless image.id.blank? %>
         </div>
+      </div>
       <% end %>
     </div>
   <% end %>

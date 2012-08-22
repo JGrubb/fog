@@ -9,8 +9,19 @@
         </div>
       <% else %>
         <div class="item <%= cycle('even', 'odd') %>">
-          <%= image_tag image.object.image.url(:thumb) %>
-          <%= link_to "Remove", "#i", { :class => "remove" } %>
+          <table>
+            <tr>
+              <td>
+                <%= image_tag image.object.image.url(:thumb) %>
+                <%= link_to "Remove", "#", { :class => "remove" } %>
+              </td>
+              <td>
+                <code>
+                  [![](<%= image.object.image.url(:small)%>)](<%= image.object.image.url(:large) %> "<%= image.object.caption %>" )
+                </code>
+              </td>
+            </tr>
+          </table>
           <%= image.hidden_field :id %>
           <%= image.hidden_field :_destroy %>
         </div>
