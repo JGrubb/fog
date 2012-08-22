@@ -16,7 +16,8 @@
                 <%= link_to "Remove", "#", { :class => "remove" } %>
               </td>
               <td>
-                <code>
+                <%= label "", "Click code to highlight" %>
+                <code class="selectable">
                   [![](<%= image.object.image.url(:small)%>)](<%= image.object.image.url(:large) %> "<%= image.object.caption %>" )
                 </code>
               </td>

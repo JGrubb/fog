@@ -6,7 +6,7 @@ class Asset < ActiveRecord::Base
     :home_slide => "680x320#",
     :large => "600x800",
     :medium => "204x270",
-    :small => "140x185",
+    :small => "140x185#",
     :thumb => "80x80#"
   },
   :storage => :s3,
