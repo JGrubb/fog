@@ -3,10 +3,10 @@
   <%= @teacher.name %>
 </h3>
 <p id="notice"><%= notice %></p>
-<div id="content">
+<div id="content" class="teacher-detail">
   
 <% if @teacher.image %>
-  <div class="image col_445">
+  <div class="image">
     <%= image_tag @teacher.image.image.url(:medium)%>
   </div>
 <% end %>

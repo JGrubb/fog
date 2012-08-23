@@ -11,7 +11,7 @@
       </div>
       <% end %>
       <div class="bio">
-        <%= dat_markdown(truncate(teacher.bio, :length => 260, :separator => ' ', :omission => link_to('...more', teacher))) %>
+        <%= dat_markdown(truncate(teacher.bio, :length => 260, :separator => ' ', :omission => link_to('  ...more', teacher))) %>
       </div>
       <% if current_user %>
         <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
