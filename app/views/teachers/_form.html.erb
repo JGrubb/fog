@@ -19,10 +19,21 @@
     <%= f.label :bio %><br />
     <%= f.text_area :bio, { :class => "span9" } %>
   </div>
-  <div class="field">
+  <div class="field items">
     <%= f.fields_for :image do |p| %>
-      <%= p.label :image, "Photo" %>
-      <%= p.file_field :image %>
+      <% if p.object.image %>
+      <div class="item">
+        <%= p.label :image, "Photo" %>
+        <%= p.file_field :image %>
+      </div> 
+      <% else %>
+      <div class="item">
+        <%= image_tag p.object.image.url(:thumb) %>
+        <%= link_to "Remove", "#", { :class => "remove" } %>
+        <%= p.hidden_field :id %>
+        <%= p.hidden_field :_destroy %>
+      </div>
+      <% end %>
     <% end %>
   </div>
   <div class="actions">

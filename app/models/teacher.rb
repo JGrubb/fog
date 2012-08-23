@@ -7,8 +7,8 @@ class Teacher < ActiveRecord::Base
   
   attr_accessible :bio, :name, :image_attributes
   
-  accepts_nested_attributes_for :image
+  accepts_nested_attributes_for :image, allow_destroy: true, :reject_if => lambda { |i| i[:image].blank? } 
   
-  validates :name, :bio, :presence => true
+  validates :name, :presence => true
   
 end
