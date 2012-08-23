@@ -7,7 +7,7 @@
       <h3><%= link_to teacher.name, teacher %></h3>
       <% if teacher.image %>
       <div class="image">
-        <%= image_tag teacher.image.image.url(:small) %>
+        <%= image_tag teacher.image.image.url(:thumb) %>
       </div>
       <% end %>
       <div class="bio">
