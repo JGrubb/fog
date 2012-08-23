@@ -6,7 +6,6 @@
 		    <%= image_tag i.image.url(:home_slide) %>
 		  <% end %>
 		</div>
-		<div id="htmlcaption" class="nivo-html-caption"> Caption with <a href="#">a link</a>. </div>
 	</div>
 	<div id="quickmenu" class="left">
 		<h2 class="replace">Our Programs</h2>
@@ -25,7 +24,7 @@
 <!-- slide end --> 
 <!-- Main begin-->
 <div id="main" class="round_8 clearfix">
-	<div class="left col_645">
+	<div id="welcome" class="left">
 		<h2 class="replace"><%= @page.title %></h2>
 		<div class="intro">
 			<%= dat_markdown(@page.body) %>
@@ -36,12 +35,12 @@
 			</div>
 		</div>
   </div>
-	<div class="left sidebar">
+	<div id="welcome-sidebar" class="left sidebar">
 		<div class="sidebar-widget shadow-light">
 			<div class="testimonials-container ">
 				<h3 class="replace">What they say</h3>
-				<p><a href="#">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac egestas.</a><br/>
-					<small><em>John Doe</em></small></p>
+				<p><a href="#">What a vision you have realized with your wonderful school!  I want you to know how grateful we are for Fields of Green and the wonderful teachers and staff and children that make it so special.</a><br/>
+					<small><em>Nicole</em></small></p>
 			</div>
 		</div>
 	</div>
