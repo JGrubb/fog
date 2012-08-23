@@ -2,10 +2,10 @@ body
   font-family: verdana, sans-serif
   font-size: 15px
   line-height: 1.5
-
-#content-wrapper
+#content-wrapper  
   background: #f1fbff url(/assets/bg.png) center bottom repeat-x
-  @include gradient(#f1fbff, darken(#f1fbff, 10%), $url: '/assets/bg.png', $position: 'bottom center repeat-x')
+  @include gradient(darken(#f1fbff, 10%), #f1fbff, $url: '/assets/bg.png', $position: 'bottom repeat-x')
+  position: relative
 
 .interior
   padding: 0 1em
