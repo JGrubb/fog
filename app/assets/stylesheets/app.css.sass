@@ -3,6 +3,10 @@ body
   font-size: 15px
   line-height: 1.5
 
+#content-wrapper
+  background: #f1fbff url(/assets/bg.png) center bottom repeat-x
+  @include gradient(#f1fbff, darken(#f1fbff, 10%), $url: '/assets/bg.png', $position: 'bottom center repeat-x')
+
 .interior
   padding: 0 1em
 #footer
