@@ -2,7 +2,7 @@ class TeachersController < ApplicationController
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.order("created_at ASC")
     
     respond_to do |format|
       format.html { render :layout => "pages"}
