@@ -36,6 +36,7 @@ class TeachersController < ApplicationController
   # GET /teachers/1/edit
   def edit
     @teacher = Teacher.find(params[:id])
+    @teacher.build_image if @teacher.image.nil?
   end
 
   # POST /teachers
