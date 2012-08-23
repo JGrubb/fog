@@ -1,15 +1,19 @@
-<div class="interior">
-  <p id="notice"><%= notice %></p>
-
-  <h3 class="page-title">
-    <%= @announcement.title %>
-  </h3>
-  <div>
-    <%= dat_markdown(@announcement.body) %>
+<div id="main" class="round_8">
+  <div class="page_title round_6">
+    <h1 class="replace"><%= @announcement.title %></h1>
   </div>
+  
+  <div id="content" class="interior left">
+    <p id="notice"><%= notice %></p>
 
-  <% if current_user %>
-    <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
-    <%= link_to 'Back', announcements_path %>
-  <% end %>
+    <div class="post">
+      <%= dat_markdown(@announcement.body) %>
+      <% if current_user %>
+        <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+        <%= link_to 'Back', announcements_path %>
+      <% end %>
+    </div>
+
+  </div>
+  <%= render "sidebar" %>
 </div>
