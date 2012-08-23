@@ -1,12 +1,12 @@
 <!-- Footer begin -->
 <div id="footer" class="round_8 clearfix">
 	<div class="column">
-		<h4 class="replace">Latest News</h4>
+		<h4 class="replace">Announcements</h4>
 		<ul class="bullet-list">
-			<li><a href="#">Donec ut vestibulum nunc</a></li>
-			<li><a href="#">Ut malesuada suscipit augue accumsan rutrum</a></li>
-			<li><a href="#">Suspendisse non est ut augue dapibus pulvinar</a></li>
-		</ul>
+      <% @announcements.each do |a| %>
+			  <li><%= link_to a.title, a %></li>
+		  <% end %>
+    </ul>
 	</div>
 	<div class="column">
 		<h4 class="replace">Events</h4>

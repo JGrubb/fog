@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+  before_filter :persistent_stuff  
   protected
   
   def current_user
@@ -19,5 +19,9 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
-    
+  private
+  
+  def persistent_stuff
+    @announcements = Announcement.order("created_at DESC").limit(3)
+  end
 end
