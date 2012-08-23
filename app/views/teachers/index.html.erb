@@ -3,7 +3,7 @@
 </div>
 <div id="content" class="left teachers-index">
   <% @teachers.each do |teacher| %>
-    <div class="teacher col_312 <%= cycle('alpha', 'omega') %>">
+    <div class="teacher col_201 <%= cycle('alpha', '', 'omega') %>">
       <h3><%= link_to teacher.name, teacher %></h3>
       <% if teacher.image %>
       <div class="image">
@@ -11,7 +11,7 @@
       </div>
       <% end %>
       <div class="bio">
-        <%= dat_markdown(truncate(teacher.bio, :length => 260, :separator => ' ', :omission => link_to('  ...more', teacher))) %>
+        <%= dat_markdown(truncate(teacher.bio, :length => 180, :separator => ' ', :omission => link_to('  ...more', teacher))) %>
       </div>
       <% if current_user %>
         <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
