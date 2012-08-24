@@ -1,5 +1,7 @@
 Fog::Application.routes.draw do
 
+  resources :events
+
   #resources :pages
   
   controller :sessions do
