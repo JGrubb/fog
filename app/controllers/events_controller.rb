@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
+  before_filter :require_user, :except => ["index", "show"]
+
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-
+    @occurrences = Occurrence.all
+    @date = params[:month] ? Date.parse("01-#{params[:month]}") : Date.today
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
@@ -14,7 +16,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }
@@ -25,6 +27,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
+    1.times { @event.occurrences.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +38,7 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
+    1.times { @event.occurrences.build } if @event.occurrences.empty?
   end
 
   # POST /events
