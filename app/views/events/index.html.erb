@@ -15,7 +15,10 @@
         <%= date.day %><br />
         <ul>
           <% occurrences.each do |occurrence| %>
-          <li><%= occurrence.event.title %></li>
+          <% if current_user %>
+            <li><%= link_to occurrence.event.title, occurrence.event %>
+          <% else %>
+            <li><%= occurrence.event.title %></li>
           <% end %>
         </ul>
       <% end %>
