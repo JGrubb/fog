@@ -9,10 +9,10 @@
     </ul>
 	</div>
 	<div class="column">
-		<h4 class="replace"><%= link_to "Events", events_path %></h4>
+		<h4 class="replace">Events</h4>
 		<ul class="bullet-list">
       <% @occurrences.each do |o| %>
-			<li><%= link_to o.event.title, o.event %><span class="date"><%= o.starts.strftime('%B %e') %></li>
+			<li><%= link_to o.event.title, events_path %><span class="date"><%= o.starts.strftime('%B %e') %></li>
 		  <% end %>
     </ul>
 	</div>
