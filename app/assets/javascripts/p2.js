@@ -8,7 +8,12 @@ jQuery(function($) {
   $('.selectable').click(function() {
     $(this).selectText();
   });
-
+  
+  $('#content-wrapper').css({
+    'min-height' : function() {
+      return $(window).height();
+    }
+  });
 
   $('.post p a').each(function(){
    // console.log($(this));
