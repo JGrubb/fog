@@ -11,7 +11,7 @@
 	<div class="column">
 		<h4 class="replace">Events</h4>
 		<ul class="bullet-list">
-      <% @occurrences.each do |o| %>
+      <% @footer_occurrences.each do |o| %>
 			<li><%= link_to o.event.title, events_path %><span class="date"><%= o.starts.strftime('%B %e') %></li>
 		  <% end %>
     </ul>

@@ -15,15 +15,16 @@
         <%= date.day %><br />
         <ul>
           <% occurrences.each do |occurrence| %>
-          <% if current_user %>
-            <li><%= link_to occurrence.event.title, occurrence.event %>
-          <% else %>
-            <li><%= occurrence.event.title %></li>
+            <% if current_user %>
+              <li><%= link_to occurrence.event.title, occurrence.event %>
+            <% else %>
+              <li><%= occurrence.event.title %></li>
+            <% end %>
           <% end %>
         </ul>
       <% end %>
     <% end %>
   </div>
 
-  <%= link_to 'New Event', new_event_path if current_user %>
+  <%= link_to('New Event', new_event_path) if current_user %>
 </div>
