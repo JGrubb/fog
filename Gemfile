@@ -15,6 +15,7 @@ gem 'redcarpet'
 gem 'awesome_nested_fields'
 gem 'watu_table_builder', :require => 'table_builder'
 gem 'recurrence'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.

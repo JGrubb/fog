@@ -23,5 +23,6 @@ class ApplicationController < ActionController::Base
   
   def persistent_stuff
     @announcements = Announcement.order("created_at DESC").limit(3)
+    @occurrences = Occurrence.where("starts > #{Date.today - 1}").order("starts ASC").limit(3)
   end
 end
