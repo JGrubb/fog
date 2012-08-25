@@ -15,7 +15,7 @@
         <%= date.day %><br />
         <ul>
           <% occurrences.each do |occurrence| %>
-          <li><%= link_to occurrence.event.title, occurrence.event %></li>
+          <li><%= occurrence.event.title %></li>
           <% end %>
         </ul>
       <% end %>
