@@ -3,10 +3,19 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :description  %>
-    <%= f.simple_fields_for :occurrences do |o| %>
-      <%= o.input :starts %>
+    <%= f.input :description %>
+    <div class="items">
+    <%= f.nested_fields_for :occurrences do |o| %>
+      <fieldset class="item">
+        <%= o.label :starts, "date" %>
+        <%= o.text_field :starts, { :class => "event_date_field" } %>
+        <%= link_to "Remove", "#", { :class => "remove" } %>
+        <%= o.hidden_field :id %>
+        <%= o.hidden_field :_destroy %>
+      </fieldset>
     <% end %>
+    <%= link_to "Add date", "#", { :class => "add" } %>
+    </div>
   </div>
 
   <div class="form-actions">

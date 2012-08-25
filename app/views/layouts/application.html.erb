@@ -4,6 +4,10 @@
   <title>Fields of Green Montessori School</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <% if current_user %>
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" %>
+    <%= stylesheet_link_tag "//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <div id="content-wrapper"> 
