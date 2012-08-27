@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require jquery.nested-fields
 //= require_tree .
-
+//= require jquery.ui.datepicker
