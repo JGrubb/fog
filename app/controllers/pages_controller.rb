@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   before_filter :require_user, :except => ["show", "home"]
 
-
   def index
     @pages = Page.all
   end
@@ -11,7 +10,9 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @page.images.build
-
+    
+    get_sidebar(@page)
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @page }
@@ -87,5 +88,12 @@ class PagesController < ApplicationController
       format.html { redirect_to pages_url }
       format.json { head :no_content }
     end
+  end
+  
+  private
+  
+  def get_sidebar(page)
+    @links = Page.where("layout = :layout", :layout => page.layout)
+    @sidebar_blog = Blog.order("created_at DESC").limit(3)
   end
 end

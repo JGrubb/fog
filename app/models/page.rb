@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   
-  attr_accessible :body, :title, :blog_post, :images_attributes, :gallery
+  attr_accessible :body, :title, :blog_post, :images_attributes, :gallery, :layout
   
   validates :title, :body, :presence => true
   

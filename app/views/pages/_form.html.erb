@@ -31,6 +31,10 @@
     <%= f.check_box :gallery %>
     <%= f.label :gallery, "Is Gallery?", { class: "gallery" } %>
   </div>
+  <div class="field">
+    <%= f.label :layout, "Page type (places the appropriate sidebar and builds the sidebar menu for that section)" %>
+    <%= select("page", "layout", %w[standard current-students prospective-students]) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
