@@ -3,5 +3,9 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $('.edit_event, .new_event').nestedFields()
-  $('.event_date_field').datepicker({ dateFormat: "yy-mm-dd" })
+  $('.edit_event, .new_event').nestedFields
+    afterInsert: (item) ->
+      $('input:text', item).datepicker
+        dateFormat: "yy-mm-dd"
+  $('.event_date_field').datepicker
+      dateFormat: "yy-mm-dd"
