@@ -1,18 +1,25 @@
-<div  id="sidebar" class="left">
+<div id="sidebar" class="left">
+<% unless @links.first.layout == "standard" %>
   <ul id="submenu" class="shadow-light">
-    <li><a href="#"><span>Sub Page 1</span></a></li>
-    <li><a href="#"><span>Sub Page 2</span></a></li>
-    <li><a href="#"><span>Sub Page 3</span></a></li>
-    <li><a href="#"><span>Sub Page 4</span></a></li>
+    <% @links.each do |page| %>
+    <li>
+      <%= link_to content_tag(:span, page.title), page %>
+    </li>
+    <% end %>
   </ul>
-  <div class="sidebar-widget">
-    <div class="search">
-      <form action="/search" method="post">
-        <div>
-          <input name="text" type="text"  class="search-field" alt="Search" />
-          <input name="submit" type="image" class="search-submit" value="search" src="/assets/search.png" />
-        </div>
-      </form>
+<% end %>
+  <div class="sidebar-widget shadow-light">
+    <div class="minimal">
+      <h4 class="replace">
+        Latest from the blog
+      </h4>
+      <ul class="reg-item">
+        <% @sidebar_blog.each do |post| %>
+        <li>
+          <%= link_to post.title, post %>
+        </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
