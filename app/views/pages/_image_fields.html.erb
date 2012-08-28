@@ -11,6 +11,7 @@
         <div class="item <%= cycle('even', 'odd') %>">
           <table>
             <tr>
+              <% unless File.basename(image.object.image_file_name).split('.')[-1] == "pdf" %>
               <td>
                 <%= image_tag image.object.image.url(:thumb) %>
                 <%= link_to "Remove", "#", { :class => "remove" } %>
@@ -21,6 +22,16 @@
                   [![](<%= image.object.image.url(:small)%>)](<%= image.object.image.url(:large) %> "<%= image.object.caption %>" )
                 </code>
               </td>
+              <% else %>
+              <td>
+                <%= File.basename(image.object.image_file_name) %>
+                <%= link_to "Remove", "#", { :class => "remove" } %>
+              </td>
+              <td>
+                <%= label "", "Click code to select" %>
+                [<%= File.basename(image.object.image_file_name) %>](<%= image.object.image.url %>)
+              </td>
+              <% end %>
             </tr>
           </table>
           <%= image.hidden_field :id %>
