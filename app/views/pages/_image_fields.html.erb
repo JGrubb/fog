@@ -28,8 +28,10 @@
                 <%= link_to "Remove", "#", { :class => "remove" } %>
               </td>
               <td>
+                <code class="selectable">
                 <%= label "", "Click code to select" %>
-                [<%= File.basename(image.object.image_file_name) %>](<%= image.object.image.url %>)
+                [<%= File.basename(image.object.image_file_name, ".pdf").gsub(/_/, ' ') %>](<%= image.object.image.url %>)
+                </code>
               </td>
               <% end %>
             </tr>
