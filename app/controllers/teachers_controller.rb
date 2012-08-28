@@ -87,7 +87,7 @@ class TeachersController < ApplicationController
   end
 
   def get_links
-    @links = Page.where("layout = :layout", :layout => "prospective-students")
+    @links = Page.where("layout = :layout", :layout => "prospective-students").order("id ASC")
     @sidebar_blog = Blog.order("created_at DESC").limit(3)
   end
    
