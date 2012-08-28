@@ -1,0 +1,11 @@
+<%= form_for @testimonial do |f| %>
+  <div class="field">
+    <%= f.label :title, "Name" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body, "Testimonial" %>
+    <%= f.text_area :body %>
+  </div>
+  <%= content_tag(:div, f.submit, :class => "actions") %>
+<% end %>

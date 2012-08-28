@@ -1,11 +1,14 @@
 class TeachersController < ApplicationController
+
+  before_filter :get_links, :only => :index
+
   # GET /teachers
   # GET /teachers.json
   def index
     @teachers = Teacher.order("created_at ASC")
     
     respond_to do |format|
-      format.html { render :layout => "pages"}
+      format.html
       format.json { render json: @teachers }
     end
   end
@@ -82,4 +85,10 @@ class TeachersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_links
+    @links = Page.where("layout = :layout", :layout => "prospective-students")
+    @sidebar_blog = Blog.order("created_at DESC").limit(3)
+  end
+   
 end

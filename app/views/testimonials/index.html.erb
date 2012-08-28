@@ -1,0 +1,16 @@
+<div id="main" class="round_8">
+  <div class="page_title round_6">
+    <h1>Testimonials</h1>
+  </div>
+  <div id="content" class="left">
+    <% @testimonials.each do |t| %>
+      <div class="quote-post">
+        <%= content_tag(:blockquote, content_tag(:p, dat_markdown(t.body))) %>
+        <%= content_tag(:p, t.title, :class => "quote-author") %>
+        <%= link_to "Edit", edit_testimonial_path(t) if current_user %> | 
+        <%= link_to "Delete", t, :method => :destroy, :data => { :confirm => "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "layouts/sidebar" %>
+</div>

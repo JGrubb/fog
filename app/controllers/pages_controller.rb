@@ -93,7 +93,7 @@ class PagesController < ApplicationController
   private
   
   def get_sidebar(page)
-    @links = Page.where("layout = :layout", :layout => page.layout)
+    @links = Page.where("layout = :layout", :layout => page.layout).order("id ASC")
     @sidebar_blog = Blog.order("created_at DESC").limit(3)
   end
 end

@@ -1,5 +1,17 @@
-<% @blog_posts.each do |post| %>
-  <div class="blog-index">
-    <%= link_to post.title, post %>
+<div id="main" class="round_8">
+  <div class="page_title round_6">
+    <h1>Blog</h1>
   </div>
-<% end %>
+  <div id="content" class="left">
+  <% @blog_posts.each do |post| %>
+    <div class="post">
+      <%= link_to content_tag(:h2, post.title), post %>
+      <ul class="meta">
+      <li><%= image_tag "icon-cal.png" %><%= post.created_at.strftime('%b %d, %Y') %></li>
+      </ul>
+      <%= content_tag(:div, truncate(post.body, :length => 300),:class => "clear-float") %>
+    </div>
+    <hr />
+  <% end %>
+  </div>
+</div>

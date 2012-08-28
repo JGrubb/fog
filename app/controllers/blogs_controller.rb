@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     @page = Blog.find(params[:id])
 
     respond_to do |format|
-      format.html { render "pages/show" }
+      format.html 
       format.json { render json: @blog_post }
     end
   end

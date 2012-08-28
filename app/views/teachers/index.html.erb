@@ -1,21 +1,24 @@
-<div class="page_title round_6">
-  <h1 class="replace">Our Teachers</h1>
-</div>
-<div id="content" class="left teachers-index">
-  <% @teachers.each do |teacher| %>
-    <div class="teacher col_201 <%= cycle('alpha', '', 'omega') %>">
-      <h3><%= link_to teacher.name, teacher %></h3>
-      <% if teacher.image %>
-      <div class="image">
-        <%= image_tag teacher.image.image.url(:thumb) %>
+<div id="main">
+  <div class="page_title round_6">
+    <h1 class="replace">Our Teachers</h1>
+  </div>
+  <div id="content" class="left teachers-index">
+    <% @teachers.each do |teacher| %>
+      <div class="teacher col_201 <%= cycle('alpha', '', 'omega') %>">
+        <h3><%= link_to teacher.name, teacher %></h3>
+        <% if teacher.image %>
+        <div class="image">
+          <%= image_tag teacher.image.image.url(:thumb) %>
+        </div>
+        <% end %>
+        <div class="bio">
+          <%= dat_markdown(truncate(teacher.bio, :length => 180, :separator => ' ', :omission => link_to('  ...more', teacher))) %>
+        </div>
+        <% if current_user %>
+          <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
-      <% end %>
-      <div class="bio">
-        <%= dat_markdown(truncate(teacher.bio, :length => 180, :separator => ' ', :omission => link_to('  ...more', teacher))) %>
-      </div>
-      <% if current_user %>
-        <%= link_to 'Edit', edit_teacher_path(teacher) %> | <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+  <%= render "layouts/sidebar" %>
 </div>
