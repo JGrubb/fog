@@ -1,11 +1,16 @@
 class TestimonialsController < ApplicationController
 
-  before_filter :get_links, :only => ["index"]
+  before_filter :get_links, :only => ["index", "show"]
 
   def index
     @testimonials = Testimonial.all
   end
 
+  def show
+    @testimonial = Testimonial.find(params[:id])
+  end
+  
+  
   def new
     @testimonial = Testimonial.new
   end

@@ -5,8 +5,8 @@
   <div id="content" class="left">
     <% @testimonials.each do |t| %>
       <div class="quote-post">
-        <%= content_tag(:blockquote, dat_markdown(truncate(t.body), :length => 300)) %>
-        <%= content_tag(:p, t.title, :class => "quote-author") %>
+        <%= content_tag(:blockquote, dat_markdown(truncate(t.body, :length => 400))) %>
+        <%= link_to content_tag(:p, t.title, :class => "quote-author"), t %>
         <%= link_to "Edit", edit_testimonial_path(t) if current_user %> | 
         <%= link_to "Delete", t, :method => :destroy, :data => { :confirm => "Are you sure?" } if current_user %>
       </div>

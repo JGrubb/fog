@@ -1,0 +1,9 @@
+<div id="main" class="round_8">
+  <div id="content" class="left">
+    <div class="quote-post">
+      <%= content_tag(:blockquote, dat_markdown(@testimonial.body)) %>
+      <%= content_tag(:p, @testimonial.title, :class => "quote-author") %>
+    </div>
+  </div>
+  <%= render "layouts/sidebar" %>
+</div>
