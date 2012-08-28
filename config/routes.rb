@@ -1,5 +1,7 @@
 Fog::Application.routes.draw do
 
+  resources :testimonials
+
   resources :events
 
   #resources :pages

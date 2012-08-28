@@ -6,6 +6,10 @@
       <%= link_to content_tag(:span, page.title), page %>
     </li>
     <% end %>
+    <% if @links.first.layout == "prospective-students" %>
+      <li><%= link_to content_tag(:span, "Our Teachers"), teachers_path %></li>
+      <li><%= link_to content_tag(:span, "Testimonials"), "/testimonials" %></li>
+    <% end %>
   </ul>
 <% end %>
   <div class="sidebar-widget shadow-light">
