@@ -1,23 +1,24 @@
 <div id="main">
-<h3 class="page_title round_6 blue">
-  <%= @teacher.name %>
-</h3>
-<p id="notice"><%= notice %></p>
-<div id="content" class="teacher-detail">
-  
-<% if @teacher.image %>
-  <div class="image">
-    <%= image_tag @teacher.image.image.url(:medium)%>
-  </div>
-<% end %>
-  
-  <div class="copy">
-    <%= dat_markdown(@teacher.bio) %>
-  </div>
-  
-  <% if current_user %>
-    <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-    <%= link_to 'Back', teachers_path %>
+  <h3 class="page_title round_6 blue">
+    <%= @teacher.name %>
+  </h3>
+  <p id="notice"><%= notice %></p>
+  <div id="content" class="teacher-detail left">
+    
+  <% if @teacher.image %>
+    <div class="image">
+      <%= image_tag @teacher.image.image.url(:medium)%>
+    </div>
   <% end %>
-</div>
+    
+    <div class="copy">
+      <%= dat_markdown(@teacher.bio) %>
+    </div>
+    
+    <% if current_user %>
+      <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+      <%= link_to 'Back', teachers_path %>
+    <% end %>
+  </div>
+  <%= render "layouts/sidebar" %>
 </div>

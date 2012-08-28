@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
 
-  before_filter :get_links, :only => :index
+  before_filter :get_links, :only => [:index, :show]
 
   # GET /teachers
   # GET /teachers.json
