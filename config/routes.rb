@@ -24,7 +24,8 @@ Fog::Application.routes.draw do
   resources :blogs
   
   controller :pages do
-    get 'pages' => 'pages#index', :as => :pages_path
+    get 'pages' => 'pages#index', :as => :pages
+    get 'payment' => 'pages#payment', :as => :payment
     get 'contact' => 'pages#contact', :as => :contact_page
     get ':id' => 'pages#show', :as => :page
     get ':id/edit' => 'pages#edit', :as => :edit_page

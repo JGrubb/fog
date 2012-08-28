@@ -12,6 +12,7 @@
     <% end %>
     <% if @links.first.layout == "current-students" %>
       <li><%= link_to content_tag(:span, "Calendar"), events_path %></li>
+      <li><%= link_to content_tag(:span, "Online Payment"), payment_path %></li>
     <% end %>
   </ul>
 <% end %>

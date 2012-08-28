@@ -5,6 +5,12 @@ class PagesController < ApplicationController
     @pages = Page.where("page_type = ''")
   end
   
+  def payment
+    @links = Page.current_students
+    @sidebar_blog = Blog.most_recent
+    render "payment"
+  end
+  
   # GET /pages/1
   # GET /pages/1.json
   def show
@@ -24,7 +30,7 @@ class PagesController < ApplicationController
     @announcement = Announcement.last
     render :layout => 'home'
   end
-  
+ 
   def contact
   end
 

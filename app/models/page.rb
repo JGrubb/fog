@@ -10,5 +10,8 @@ class Page < ActiveRecord::Base
   
   extend FriendlyId
   friendly_id :title, use: :slugged
-  
+
+  scope :current_students, where("layout = :layout", :layout => "current-students").order("id ASC")
+  scope :prospective_students, where("layout = :layout", :layout => "prospective-students").order("id ASC")
+
 end
