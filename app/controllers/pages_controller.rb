@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :require_user, :except => ["show", "home"]
+  before_filter :require_user, :except => ["show", "home", "contact", "payment"]
 
   def index
     @pages = Page.where("page_type = ''")
