@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :require_user, :except => ["show", "home"]
 
   def index
-    @pages = Page.all
+    @pages = Page.where("page_type = ''")
   end
   
   # GET /pages/1
