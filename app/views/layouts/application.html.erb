@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fields of Green Montessori School</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<div id="content-wrapper"> 
-	
-	<!-- Container begin -->
-	<div id="container"> 
-		<!-- Header begin-->
-		<div id="header" class="clearfix">
-			<div id="logo" ><%= link_to image_tag(image_path 'fog-logo.png'), root_path %> </div>
-			
-			<!-- Navigation start -->
-			<%= render 'layouts/nav' %>
-			<!-- Navigation end --> 
-		</div>
-		<!-- Header end --> 
+  <head>
+    <title>Fields of Green Montessori School</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="content-wrapper"> 
+      <div id="clouds">	
+        <!-- Container begin -->
+        <div id="container"> 
+          <div id="header" class="clearfix">
+            <div id="logo" ><%= link_to image_tag(image_path 'fog-logo.png'), root_path %> </div>
+            
+            <%= render 'layouts/nav' %>
+          </div>
     <%= yield %>
-    
-		<%= render 'layouts/footer' %>
-		
-	</div>
-	<!-- Container end --> 
-</div>
-</body>
+
+      <%= render 'layouts/footer' %>
+            
+          </div>
+        </div>
+      <!-- Container end --> 
+    </div>
+  </body>
 </html>
