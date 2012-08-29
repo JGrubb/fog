@@ -31,6 +31,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'rack-mini-profiler'
 end
 
 gem 'jquery-rails'
