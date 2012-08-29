@@ -42,11 +42,15 @@ ul.meta
   textarea
     width: 600px
 
-#error
+.flash
   padding: 0.5em
-  background: pink
-  border: 1px solid red
   @include radius(5px)
+  &#error
+    background: pink
+    border: 1px solid red
+  &#notice
+    background: #AFF0A8
+    border 1px solid green
 
 #mailer form textarea
   width: 302px

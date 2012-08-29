@@ -2,11 +2,6 @@
   <h1>Contact Us!</h1>
 </div>
 <div id="content" class="left">
-  <% if flash[:error] %>
-  <div id="error">  
-    <%= flash[:error] %>
-  </div>
-  <% end %>
   <div id="mailer" class="col_312 alpha">
     <%= form_for @message, :url => contact_page_path do |f| %>
       <div class="field">
