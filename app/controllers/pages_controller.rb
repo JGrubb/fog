@@ -103,7 +103,8 @@ class PagesController < ApplicationController
     @message = Message.new(params[:message])
     if @message.valid?
       ContactMailer.new_message(@message).deliver
-      redirect_to :action => :contact, flash[:notice] = "Message was successfully sent."
+      flash[:notice] = "Message was successfully sent."
+      redirect_to :action => :contact
     else
       flash[:error] = "Please fill all fields.  Don't forget the poem at the end."
       redirect_to :action => :contact
