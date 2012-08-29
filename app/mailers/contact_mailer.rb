@@ -4,7 +4,7 @@ class ContactMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail( :from           => @message.name, 
+    mail( :from           => @message.email, 
           :subject        => "FOG website contact",
           :template_path  => "mailers",
           :template_name  => "contact_email")
