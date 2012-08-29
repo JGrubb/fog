@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :require_user, :except => ["show", "home", "contact", "payment"]
+  before_filter :require_user, :only => ["new", "create", "edit", "update"]
 
   def index
     @pages = Page.where("page_type = ''")
@@ -32,6 +32,9 @@ class PagesController < ApplicationController
   end
  
   def contact
+    @message = Message.new
+    @links = Page.prospective_students
+    @sidebar_blog = Blog.most_recent
   end
 
   # GET /pages/new
@@ -93,6 +96,17 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to pages_url }
       format.json { head :no_content }
+    end
+  end
+  
+  def send_contact
+    @message = Message.new(params[:message])
+    if @message.valid?
+      ContactMailer.new_message(@message).deliver
+      redirect_to :action => :contact, :notice => "Message was successfully sent."
+    else
+      flash[:error] = "Please fill all fields.  Don't forget the poem at the end."
+      redirect_to :action => :contact
     end
   end
   

@@ -1,4 +1,7 @@
 class AnnouncementsController < ApplicationController
+  
+  before_filter :get_sidebar, :only => [:index, :show]
+
   # GET /announcements
   # GET /announcements.json
   def index
@@ -80,4 +83,12 @@ class AnnouncementsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+
+  def get_sidebar
+    @links = Page.current_students
+    @sidebar_blog = Blog.most_recent
+  end
+
 end

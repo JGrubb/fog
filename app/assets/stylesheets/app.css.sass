@@ -9,8 +9,6 @@ body
   @include gradient(#1d91d0, lighten(#1d91d0, 35%), $start: 15%, $url: '/assets/bg.png', $position: 'bottom repeat-x')
   position: relative
 
-.interior
-  padding: 0 1em
 #footer
   clear: both
   padding: 20px 0 8px
@@ -44,5 +42,25 @@ ul.meta
   textarea
     width: 600px
 
+#error
+  padding: 0.5em
+  background: pink
+  border: 1px solid red
+  @include radius(5px)
+
+#mailer form textarea
+  width: 302px
+  height: 200px
+
 .quote-post
   padding-bottom: 1em
+
+.address
+  margin-top: 2em
+  h5
+    text-align: center
+  p
+    background: #eee
+    @include radius(5px)
+    padding: 1em
+  
