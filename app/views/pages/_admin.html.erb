@@ -1,4 +1,5 @@
 <% if current_user %>
   <%= link_to 'Edit', edit_page_path(@page) %> |
-  <%= link_to 'Back', page_path %>
+  <%= link_to 'Back', page_path %> | 
+  <%= link_to 'Delete', @page, method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
