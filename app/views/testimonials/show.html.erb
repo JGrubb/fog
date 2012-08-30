@@ -3,6 +3,10 @@
     <div class="quote-post">
       <%= content_tag(:blockquote, dat_markdown(@testimonial.body)) %>
       <%= content_tag(:p, @testimonial.title, :class => "quote-author") %>
+      <% if current_user %>
+        <%= link_to "Edit", edit_testimonial_path(@testimonial) %> | 
+        <%= link_to "Delete", @testimonial, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      <% end %>
     </div>
   </div>
   <%= render "layouts/sidebar" %>

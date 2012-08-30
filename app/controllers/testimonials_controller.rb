@@ -33,8 +33,10 @@ class TestimonialsController < ApplicationController
   def update
     @testimonial = Testimonial.find(params[:id])
     if @testimonial.update_attributes(params[:testimonial])
-      redirect_to testimonials_path
+      flash[:notice] = "Testimonial successfully updated"
+      redirect_to testimonial_path(@testimonial)
     else
+      flash[:error] = "Something prevented the Testimonial from being saved."
       render action: "new"
     end
   end
