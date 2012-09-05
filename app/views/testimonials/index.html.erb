@@ -5,7 +5,7 @@
   <div id="content" class="left">
     <% @testimonials.each do |t| %>
       <div class="quote-post">
-        <%= content_tag(:blockquote, dat_markdown(truncate(t.body, :length => 400))) %>
+        <%= content_tag(:blockquote, dat_markdown(truncate(t.body, length: 400))) %>
         <%= content_tag(:p, t.title, :class => "quote-author") %>
         <%= link_to "Read more", t, { :class => "green medium carnival" } %>
       <% if current_user %>
