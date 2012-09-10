@@ -39,8 +39,9 @@
 		<div class="sidebar-widget shadow-light">
 			<div class="testimonials-container ">
 				<h3 class="replace">What they say</h3>
-				<p><a href="/testimonials">What a vision you have realized with your wonderful school!  I want you to know how grateful we are for Fields of Green and the wonderful teachers and staff and children that make it so special.</a><br/>
-					<small><em>Nicole</em></small></p>
+				<div><%= link_to dat_markdown(truncate @testimonial.body, :length => 150, :separator => ' '), testimonials_path %>
+					<small><em>Nicole</em></small>
+        </div>
 			</div>
 		</div>
 	</div>
@@ -50,7 +51,7 @@
 		<div id="name">
 		 <%= dat_markdown(truncate @announcement.body, :length => 400, :separator => ' ') %>
 		</div>
-    <%= link_to "Read more...", @announcement, {:class => "small fancy"} %><br />
+    <%= link_to "Read more...", @announcement, {:class => "small yellow carnival"} %><br />
     <% if current_user %>
       <%= link_to "edit", edit_announcement_path(@announcement) %>
 	  <% end %>

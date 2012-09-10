@@ -28,6 +28,7 @@ class PagesController < ApplicationController
   def home
     @page = Page.find(2)
     @announcement = Announcement.last
+    @testimonial = Testimonial.all.sample    
     render :layout => 'home'
   end
  
