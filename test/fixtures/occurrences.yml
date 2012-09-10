@@ -1,13 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  starts: 2012-08-21 17:26:05
-  ends: 2012-08-21 17:26:05
-  interval: 1
+  starts: 2012-08-21
   event: 
 
 two:
-  starts: 2012-08-21 17:26:05
-  ends: 2012-08-21 17:26:05
-  interval: 1
+  starts: 2012-08-21
   event: 

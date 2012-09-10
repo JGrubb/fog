@@ -48,7 +48,7 @@
 	<div class="col_445">
 		<h2 class="replace">Announcements</h2>
 		<div id="name">
-		 <%= @announcement.body %>
+		 <%= dat_markdown(truncate @announcement.body, :length => 400, :separator => ' ') %>
 		</div>
     <%= link_to "Read more...", @announcement, {:class => "small fancy"} %><br />
     <% if current_user %>

@@ -42,23 +42,23 @@ ActiveRecord::Schema.define(:version => 20120827215821) do
   end
 
   create_table "occurrences", :force => true do |t|
-    t.date     "starts"
-    t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.date      "starts"
+    t.integer   "event_id"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   add_index "occurrences", ["event_id"], :name => "index_occurrences_on_event_id"
 
   create_table "pages", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.string   "slug"
-    t.string   "page_type"
-    t.boolean  "gallery",    :default => false
-    t.string   "layout",     :default => "standard"
+    t.string    "title"
+    t.text      "body"
+    t.timestamp "created_at",                         :null => false
+    t.timestamp "updated_at",                         :null => false
+    t.string    "slug"
+    t.string    "page_type"
+    t.boolean   "gallery",    :default => false
+    t.string    "layout",     :default => "standard"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"

@@ -6,7 +6,7 @@
   <div id="calendar">
     <h2 id="month">
       <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%m-%Y") %>
-      <%=h @date.strftime("%B %Y") %>
+      <%= @date.strftime("%B %Y") %>
       <%= link_to ">", :month => (@date.end_of_month+1).strftime("%m-%Y") %>
     </h2>
     <%= calendar_for @occurrences, :year => @date.year, :month => @date.month do |calendar| %>
