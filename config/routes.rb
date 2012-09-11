@@ -23,6 +23,9 @@ Fog::Application.routes.draw do
       
   resources :blogs
   
+#  resources :pages, except: [:show, :contact, :payment]
+#  get ':id', to: 'pages#show', as: :page
+
   controller :pages do
     get 'pages' => 'pages#index', :as => :pages
     get 'payment' => 'pages#payment', :as => :payment

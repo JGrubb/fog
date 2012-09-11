@@ -11,6 +11,11 @@ class PagesController < ApplicationController
     render "payment"
   end
   
+  def contact
+    @message = Message.new
+    @links = Page.prospective_students
+    @sidebar_blog = Blog.most_recent
+  end
   # GET /pages/1
   # GET /pages/1.json
   def show
@@ -32,11 +37,6 @@ class PagesController < ApplicationController
     render :layout => 'home'
   end
  
-  def contact
-    @message = Message.new
-    @links = Page.prospective_students
-    @sidebar_blog = Blog.most_recent
-  end
 
   # GET /pages/new
   # GET /pages/new.json
