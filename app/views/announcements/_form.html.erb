@@ -1,4 +1,4 @@
-<%= form_for(@announcement) do |f| %>
+<%= form_for(@announcement, :html => { :class => "announcement_form" }) do |f| %>
   <% if @announcement.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
@@ -19,6 +19,18 @@
     <%= f.label :body %><br />
     <%= f.text_area :body, { :class => "span8" } %>
   </div>
+  <div class="field items">
+    <%= f.nested_fields_for :announcement_attachments do |a| %>
+      <fieldset class="item">
+        <%= a.label :announcement_attachment, "File?" %>
+        <%= a.file_field :announcement_attachment %>
+        <%= link_to "remove", "#", { :class => "remove" } %>
+        <%= a.hidden_field :id %>
+        <%= a.hidden_field :_destroy %>
+      </fieldset>
+    <% end %>
+  </div>
+  <%= link_to "Add file", "#", { :class => "add" } %>
   <p><a href="http://www.johnnygrubb.com/posts/yet-another-markdown-cheatsheet">Formatting Help</a></p>
   <div class="actions">
     <%= f.submit %>

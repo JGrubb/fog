@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911183515) do
+ActiveRecord::Schema.define(:version => 20120913224459) do
 
   create_table "announcement_attachments", :force => true do |t|
     t.datetime "created_at",        :null => false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120911183515) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+    t.integer  "announcement_id"
   end
 
   create_table "announcements", :force => true do |t|
