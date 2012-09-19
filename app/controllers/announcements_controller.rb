@@ -5,7 +5,7 @@ class AnnouncementsController < ApplicationController
   # GET /announcements
   # GET /announcements.json
   def index
-    @announcements = Announcement.order("created_at DESC").limit(10)
+    @announcements = Announcement.order("created_at DESC").paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

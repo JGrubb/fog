@@ -4,4 +4,7 @@ class Announcement < ActiveRecord::Base
   accepts_nested_attributes_for :announcement_attachments, 
                                 allow_destroy: true,
                                 reject_if: lambda { |i| i[:file].blank? }
+                                
+  self.per_page = 5
+
 end

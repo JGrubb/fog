@@ -15,7 +15,7 @@
       </div>
       <hr />
     <% end %>
-    <%= link_to 'New Announcement', new_announcement_path if current_user %>
+    <%= will_paginate @announcements %>
   </div>
   <%= render "layouts/sidebar" %>
 </div>
