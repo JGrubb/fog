@@ -22,8 +22,7 @@
   <div class="field items">
     <%= f.nested_fields_for :announcement_attachments do |a| %>
       <fieldset class="item">
-        <%= a.label :announcement_attachment, "File?" %>
-        <%= a.file_field :announcement_attachment %>
+        <%= a.file_field :file %>
         <%= link_to "remove", "#", { :class => "remove" } %>
         <%= a.hidden_field :id %>
         <%= a.hidden_field :_destroy %>

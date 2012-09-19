@@ -6,6 +6,11 @@
   <div id="content" class="interior left">
     <div class="post">
       <%= dat_markdown(@announcement.body) %>
+      <% unless @announcement.announcement_attachments.empty? %>
+        <% @announcement.announcement_attachments.each do |att| %>
+          <%= link_to "Download #{att[:file_file_name]}", att.file.url, { class: "blue small tape" } %><br />
+        <% end %>
+      <% end %>
       <% if current_user %>
         <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
         <%= link_to 'Back', announcements_path %>
