@@ -8,6 +8,11 @@
         <h2><%= link_to announcement.title, announcement %></h2>
         <p><em><%= announcement.created_at.strftime('%B %e - %l:%M%p') %></em></p>
         <div><%= dat_markdown announcement.body %></div>
+        <% unless announcement.announcement_attachments.empty? %>
+          <% announcement.announcement_attachments.each do |att| %>
+            <%= link_to "Download #{att[:file_file_name]}", att.file.url, { class: "red small tape" } %>
+          <% end %>
+        <% end %>
         <% if current_user %>
         <p><%= link_to 'Edit', edit_announcement_path(announcement) %> | 
         <%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
