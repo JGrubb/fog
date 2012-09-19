@@ -8,7 +8,7 @@
       <%= dat_markdown(@announcement.body) %>
       <% unless @announcement.announcement_attachments.empty? %>
         <% @announcement.announcement_attachments.each do |att| %>
-          <%= link_to "Download #{att[:file_file_name]}", att.file.url, { class: "blue small tape" } %><br />
+          <%= link_to "Download #{att[:file_file_name]}", att.file.url, { class: "#{ cycle('blue', 'yellow', 'green')} small tape" } %><br />
         <% end %>
       <% end %>
       <% if current_user %>
