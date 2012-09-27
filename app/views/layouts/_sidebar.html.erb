@@ -17,18 +17,4 @@
     <% end %>
   </ul>
 <% end %>
-  <div class="sidebar-widget shadow-light">
-    <div class="minimal">
-      <h4 class="replace">
-        Latest from the blog
-      </h4>
-      <ul class="reg-item">
-        <% @sidebar_blog.each do |post| %>
-        <li>
-          <%= link_to post.title, post %>
-        </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
 </div>

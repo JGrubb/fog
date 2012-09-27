@@ -4,7 +4,9 @@
 		<h4 class="replace">Announcements</h4>
 		<ul class="bullet-list">
       <% @announcements.each do |a| %>
-			  <li><%= link_to a.title, a %></li>
+			  <li><%= link_to a.title, a %><br />
+        - <em style="font-size:80%"><%= a.created_at.strftime('%D')%></em>
+        </li>
 		  <% end %>
     </ul>
 	</div>
