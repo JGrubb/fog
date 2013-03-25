@@ -9,7 +9,7 @@ gem 'paperclip'
 gem "friendly_id", "~> 4.0.9"
 gem 'thin'
 gem 'aws-sdk'
-gem 'rmagick'
+#gem 'rmagick'
 gem 'redcarpet'
 gem 'awesome_nested_fields'
 gem 'watu_table_builder', :require => 'table_builder'
@@ -32,7 +32,7 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
+#gem 'sqlite3'
   gem 'rack-mini-profiler'
 end
 
