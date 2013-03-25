@@ -4,8 +4,8 @@ class AnnouncementAttachment < ActiveRecord::Base
   has_attached_file :file,
                     :storage => :s3,
                     :s3_credentials => {
-                      :bucket             => ENV['S3_BUCKET_NAME'],
-                      :access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-                      :secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
+                      :bucket             => S3_BUCKET_NAME,
+                      :access_key_id      => S3_ACCESS_KEY,
+                      :secret_access_key  => S3_SECRET_KEY
                     }
 end
