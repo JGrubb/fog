@@ -1,21 +1,10 @@
 Fog::Application.routes.draw do
 
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
   resources :testimonials
 
   resources :events
-
-  #resources :pages
-  
-  controller :sessions do
-    get 'login' => :new, :as => :new_session
-    post 'login' => :create
-    get 'logout' => :destroy, :as => :logout
-  end
-  
-  controller :users do
-    get 'users/new' => 'users#new'
-    post 'users' => 'users#create'
-  end
 
   resources :teachers
 
