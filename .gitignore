@@ -21,3 +21,4 @@ config/s3.rb
 config/database.yml
 config/unicorn.rb
 public/assets
+config/initializers/secret_token.rb
