@@ -108,6 +108,15 @@ class PagesController < ApplicationController
     end
   end
   
+  def sitemap
+    @pages = Page.all
+    @announcements = Announcement.all
+    @teachers = Teacher.all
+    respond_to do |format|
+      format.xml
+    end
+  end
+  
   private
   
   def get_sidebar(page)
