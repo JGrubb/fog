@@ -3,7 +3,7 @@ class TestimonialsController < ApplicationController
   before_filter :get_links, :only => ["index", "show"]
 
   def index
-    @testimonials = Testimonial.all
+    @testimonials = Testimonial.order('id DESC')
   end
 
   def show
