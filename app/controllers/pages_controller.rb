@@ -16,6 +16,18 @@ class PagesController < ApplicationController
     @links = Page.prospective_students
     @sidebar_blog = Blog.most_recent
   end
+
+  def sitemap
+    @pages = Page.all
+    @announcements = Announcement.all
+    @teachers = Teacher.all
+    @testimonials = Testimonial.all
+
+    respond_to do |format|
+      format.xml
+    end
+  end
+
   # GET /pages/1
   # GET /pages/1.json
   def show

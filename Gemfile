@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'paperclip'
 gem "friendly_id", "~> 4.0.9"
-gem 'thin'
 gem 'aws-sdk'
 #gem 'rmagick'
 gem 'redcarpet'

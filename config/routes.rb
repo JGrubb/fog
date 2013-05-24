@@ -19,6 +19,7 @@ Fog::Application.routes.draw do
     get 'pages' => 'pages#index', :as => :pages
     get 'payment' => 'pages#payment', :as => :payment
     get 'contact' => 'pages#contact', :as => :contact_page
+    get 'sitemap' => 'pages#sitemap'
     post 'contact' => 'pages#send_contact'
     get ':id' => 'pages#show', :as => :page
     get ':id/edit' => 'pages#edit', :as => :edit_page
