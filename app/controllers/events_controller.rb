@@ -10,6 +10,7 @@ class EventsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @events }
     end
+    @description = "Events calendar for #{@date} at Fields of Green Montessori"
   end
 
   # GET /events/1
