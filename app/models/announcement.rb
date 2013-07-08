@@ -7,6 +7,9 @@ class Announcement < ActiveRecord::Base
                                 
   self.per_page = 5
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   validates :title, :body, :presence => true
 
 end

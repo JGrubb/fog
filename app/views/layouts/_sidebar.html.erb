@@ -3,17 +3,17 @@
   <ul id="submenu" class="shadow-light">
     <% @links.each do |page| %>
     <li>
-      <%= link_to content_tag(:span, page.title), page %>
+      <%= link_to(content_tag(:span, page.title), page, :alt => page.title, :title => page.title) %>
     </li>
     <% end %>
     <% if @links.first.layout == "prospective-students" %>
-      <li><%= link_to content_tag(:span, "Our Teachers"), teachers_path %></li>
-      <li><%= link_to content_tag(:span, "Testimonials"), "/testimonials" %></li>
+      <li><%= link_to(content_tag(:span, "Our Teachers"), teachers_path, :alt => "Our Teachers", :title => "Our Teachers") %></li>
+      <li><%= link_to content_tag(:span, "Testimonials"), testimonials_path, :alt => "Testimonials", :title => "Testimonials" %></li>
     <% end %>
     <% if @links.first.layout == "current-students" %>
-      <li><%= link_to content_tag(:span, "Calendar"), events_path %></li>
-      <li><%= link_to content_tag(:span, "Online Payment"), payment_path %></li>
-      <li><%= link_to content_tag(:span, "Announcements"), announcements_path %></li>
+      <li><%= link_to content_tag(:span, "Calendar"), events_path, :alt => "Events Calendar", :title => "Events Calendar" %></li>
+      <li><%= link_to content_tag(:span, "Online Payment"), payment_path, :alt => "Online Payments", :title => "Online Payments" %></li>
+      <li><%= link_to content_tag(:span, "Announcements"), announcements_path, :alt => "Announcements", :title => "Announcements" %></li>
     <% end %>
   </ul>
 <% end %>
