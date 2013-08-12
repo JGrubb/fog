@@ -26,12 +26,20 @@
       <%= render "image_fields", :image => image %>
     <% end %>
   </div>
-  <%= link_to "Add file/image", "#", { :class => 'add' } %>
 
   <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, { :class => "span8", :rows => 3 } %>
+  </div>
+
+  <div class="field">
+    <%= link_to "Add file/image", "#", { :class => 'add' } %>
+  </div>
+
+  <!--<div class="field">
     <%= f.check_box :gallery %>
     <%= f.label :gallery, "Is Gallery?", { class: "gallery" } %>
-  </div>
+  </div>-->
   <div class="field">
     <%= f.label :layout, "Page type (places the appropriate sidebar and builds the sidebar menu for that section)" %>
     <%= select("page", "layout", %w[standard current-students prospective-students]) %>

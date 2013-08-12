@@ -4,10 +4,12 @@ class TestimonialsController < ApplicationController
 
   def index
     @testimonials = Testimonial.order('id DESC')
+    @description = "Read what some other parents have said about their experiences and those of their children at Fields of Green Montessori."
   end
 
   def show
     @testimonial = Testimonial.find(params[:id])
+    @description = @testimonial.body[0..200]
   end
   
   

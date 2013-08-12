@@ -9,12 +9,14 @@ class PagesController < ApplicationController
     @links = Page.current_students
     @sidebar_blog = Blog.most_recent
     render "payment"
+    @description = "Please use the resources on this page to make your tuition payment online for Field of Green"
   end
   
   def contact
     @message = Message.new
     @links = Page.prospective_students
     @sidebar_blog = Blog.most_recent
+    @description = "Please get in touch with Fields of Green Montessori to ask about tuition, the curriculum, or tours of the school and grounds."
   end
 
   def sitemap
@@ -33,6 +35,7 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @page.images.build
+    @description = @page.description ? @page.description : @page.body[0..150]
     
     get_sidebar(@page)
     
@@ -117,15 +120,6 @@ class PagesController < ApplicationController
     else
       flash[:error] = "Please fill all fields.  Don't forget the poem at the end."
       redirect_to :action => :contact
-    end
-  end
-  
-  def sitemap
-    @pages = Page.all
-    @announcements = Announcement.all
-    @teachers = Teacher.all
-    respond_to do |format|
-      format.xml
     end
   end
   

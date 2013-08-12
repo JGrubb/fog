@@ -6,6 +6,7 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.order("created_at ASC")
+    @description = "Get to know a bit more about the teachers at Fields of Green."
     
     respond_to do |format|
       format.html
@@ -17,6 +18,7 @@ class TeachersController < ApplicationController
   # GET /teachers/1.json
   def show
     @teacher = Teacher.find(params[:id])
+    @description = @teacher.bio[0..200]
 
     respond_to do |format|
       format.html

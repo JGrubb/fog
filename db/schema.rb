@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702192444) do
+ActiveRecord::Schema.define(:version => 20130708195510) do
 
   create_table "announcement_attachments", :force => true do |t|
     t.datetime "created_at",        :null => false
@@ -64,12 +64,13 @@ ActiveRecord::Schema.define(:version => 20130702192444) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.string   "slug"
     t.string   "page_type"
-    t.boolean  "gallery",    :default => false
-    t.string   "layout",     :default => "standard"
+    t.boolean  "gallery",     :default => false
+    t.string   "layout",      :default => "standard"
+    t.string   "description"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
