@@ -1,6 +1,7 @@
 <div id="main" class="round_8">
   <div class="page_title round_6">
     <h1 class="replace"><%= @announcement.title %></h1>
+    <em><small><%= @announcement.created_at.strftime('%B %d, %Y') %></small></em>
   </div>
   
   <div id="content" class="interior left">
