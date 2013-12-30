@@ -17,10 +17,11 @@
 *.swp
 doc/
 db/fog.sql
-config/s3.rb
+config/initializers/s3.rb
 config/database.yml
 config/unicorn.rb
 public/assets
 config/initializers/secret_token.rb
-config/email.rb
+config/initializers/email.rb
 public/
+config/initializers/smtp.rb
