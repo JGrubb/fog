@@ -44,7 +44,7 @@
 		  <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
 		<% end %>
 		<% unless current_user %>
-		  <%= link_to "Log In", new_user_session_path %>
+		  <%= link_to "Log In", new_user_session_path %> | Site by <%= link_to "IBD", "http://www.ignoredbydinosaurs.com" %>
 		<% end %>
 	</div>
 </div>
