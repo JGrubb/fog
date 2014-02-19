@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'will_paginate'
 gem 'devise'
 gem 'mysql2'
+gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
