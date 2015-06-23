@@ -8,4 +8,5 @@ class AnnouncementAttachment < ActiveRecord::Base
                       :access_key_id      => S3_ACCESS_KEY,
                       :secret_access_key  => S3_SECRET_KEY
                     }
+  validates_attachment_content_type :file, :content_type => /\Aapplication\/.*\Z/
 end
