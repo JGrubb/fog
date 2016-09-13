@@ -25,9 +25,6 @@ web:
             expires: 1h
             allow: true
 
-relationships:
-    database: "mysqldb:mysql"
-
 # The mounts that will be performed when the package is deployed.
 mounts:
    "/log": "shared:files/log"
