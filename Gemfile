@@ -16,7 +16,6 @@ gem 'recurrence'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'devise'
-gem 'mysql2'
 gem 'sqlite3'
 
 # Gems used only for assets and not required
@@ -41,15 +40,4 @@ gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
 gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
