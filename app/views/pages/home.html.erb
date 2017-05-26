@@ -2,9 +2,9 @@
 <div id="slide-container"  class="clearfix">
 	<div id="slider-wrapper" class="left">
 		<div id="slideshow">
-		  <% @page.images.each do |i| %>
-		    <%= image_tag i.image.url(:home_slide) %>
-		  <% end %>
+      <% @page.images.each do |i| %>
+        <%= image_tag i.image.url(:home_slide) %>
+      <% end %>
 		</div>
 	</div>
 	<div id="quickmenu" class="left">

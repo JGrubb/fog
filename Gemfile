@@ -33,6 +33,7 @@ end
 group :development do
 #gem 'sqlite3'
   gem 'rack-mini-profiler'
+  gem 'test-unit', '~> 3.0'
 end
 
 gem 'jquery-rails'
@@ -41,3 +42,4 @@ gem 'jquery-ui-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'unicorn'
+gem 'platform_sh_rails'
